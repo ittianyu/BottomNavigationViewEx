@@ -1,4 +1,4 @@
-## [中文版点我](#zh) ##
+## [中文版点我 或 滑动到后面](#zh) ##
 
 ## BottomNavigationViewEx ##
 An android lib for enhancing BottomNavigationView.
@@ -78,7 +78,8 @@ compile 'com.android.support:design:25.0.0'
 ### Importing to project ###
 
 #### Example for Gradle: ####
-1. Add it in your root build.gradle at the end of repositories:
+
+Step 1. Add it in your root build.gradle at the end of repositories:
 ```
 allprojects {
 	repositories {
@@ -87,14 +88,15 @@ allprojects {
 	}
 }
 ```
-2. Add the dependency
+
+Step 2. Add the dependency
 ```
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.0.0'
 ```
 
 #### and for Maven: ####
 
-1. Add it in your root build.gradle at the end of repositories:
+Step 1. Add it in your root build.gradle at the end of repositories:
 ```
 <repositories>
 	<repository>
@@ -103,7 +105,8 @@ compile 'com.github.ittianyu:BottomNavigationViewEx:1.0.0'
 	</repository>
 </repositories>
 ```
-2. Add the dependency
+
+Step 2. Add the dependency
 ```
 <dependency>
     <groupId>com.github.ittianyu</groupId>
@@ -273,7 +276,7 @@ compile 'com.android.support:design:25.0.0'
 
 #### Gradle例子: ####
 
-1. 在工程根目录的 `build.gradle` 最后添加如下代码:
+步骤 1. 在工程根目录的 `build.gradle` 最后添加如下代码:
 ```
 allprojects {
 	repositories {
@@ -282,14 +285,15 @@ allprojects {
 	}
 }
 ```
-2. 添加依赖
+
+步骤 2. 添加依赖
 ```
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.0.0'
 ```
 
 #### Maven例子: ####
 
-1. 在工程根目录的 `build.gradle` 最后添加如下代码:
+步骤 1. 在工程根目录的 `build.gradle` 最后添加如下代码:
 ```
 <repositories>
 	<repository>
@@ -298,7 +302,8 @@ compile 'com.github.ittianyu:BottomNavigationViewEx:1.0.0'
 	</repository>
 </repositories>
 ```
-2. 添加依赖
+
+步骤 2. 添加依赖
 ```
 <dependency>
     <groupId>com.github.ittianyu</groupId>
