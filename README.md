@@ -62,6 +62,7 @@ An android lib for enhancing BottomNavigationView.
 ![](/read_me_images/no_animation_shifting_mode_item_shifting_mode_icon.gif)
 
 **With ViewPager**
+
 ![](/read_me_images/with_view_pager.gif)
 
 
@@ -86,9 +87,7 @@ allprojects {
 	}
 }
 ```
-
 2. Add the dependency
-
 ```
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.0.0'
 ```
@@ -104,7 +103,6 @@ compile 'com.github.ittianyu:BottomNavigationViewEx:1.0.0'
 	</repository>
 </repositories>
 ```
-
 2. Add the dependency
 ```
 <dependency>
@@ -258,6 +256,7 @@ You no need to worry about stability. Because I minimise modifying by reflecting
 ![](/read_me_images/no_animation_shifting_mode_item_shifting_mode_icon.gif)
 
 **With ViewPager**
+
 ![](/read_me_images/with_view_pager.gif)
 
 
@@ -283,9 +282,7 @@ allprojects {
 	}
 }
 ```
-
 2. 添加依赖
-
 ```
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.0.0'
 ```
@@ -301,7 +298,6 @@ compile 'com.github.ittianyu:BottomNavigationViewEx:1.0.0'
 	</repository>
 </repositories>
 ```
-
 2. 添加依赖
 ```
 <dependency>
