@@ -117,7 +117,7 @@ Step 2. Add the dependency
 
 #### Manual: ####
 
-Downloading [BottomNavigationViewEx.java](\widget\src\main\java\com\ittianyu\bottomnavigationviewex) and copying it to you project。
+Downloading [BottomNavigationViewEx.java](https://raw.githubusercontent.com/ittianyu/BottomNavigationViewEx/master/widget/src/main/java/com/ittianyu/bottomnavigationviewex/BottomNavigationViewEx.java) and copying it to you project。
 
 
 ## Getting started ##
@@ -314,7 +314,7 @@ compile 'com.github.ittianyu:BottomNavigationViewEx:1.0.0'
 
 #### 手动导入: ####
 
-下载文件 [BottomNavigationViewEx.java](\widget\src\main\java\com\ittianyu\bottomnavigationviewex) 并复制到你的工程中。
+下载文件 [BottomNavigationViewEx.java](https://raw.githubusercontent.com/ittianyu/BottomNavigationViewEx/master/widget/src/main/java/com/ittianyu/bottomnavigationviewex/BottomNavigationViewEx.java) 并复制到你的工程中。
 
 
 ## 开始使用 ##
