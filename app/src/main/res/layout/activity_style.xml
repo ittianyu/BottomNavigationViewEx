@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data></data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".style.StyleActivity">
+
+            <TextView
+                style="@style/text_black"
+                android:text="normal" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_normal"
+                style="@style/bnve"
+                app:itemIconTint="@color/item_text_color"
+                app:itemTextColor="@color/item_text_color"
+                app:menu="@menu/menu_navigation" />
+
+            <TextView
+                style="@style/text_black"
+                android:text="no animation" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_no_animation"
+                style="@style/bnve"
+                app:itemIconTint="@color/item_text_color"
+                app:itemTextColor="@color/item_text_color"
+                app:menu="@menu/menu_navigation" />
+
+            <TextView
+                style="@style/text_black"
+                android:text="no shifting mode" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_no_shifting_mode"
+                style="@style/bnve"
+                app:itemIconTint="@color/item_text_color"
+                app:itemTextColor="@color/item_text_color"
+                app:menu="@menu/menu_navigation" />
+
+            <TextView
+                style="@style/text_black"
+                android:text="no item shifting mode" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_no_item_shifting_mode"
+                style="@style/bnve"
+                app:itemIconTint="@color/item_text_color"
+                app:itemTextColor="@color/item_text_color"
+                app:menu="@menu/menu_navigation" />
+
+            <TextView
+                style="@style/text_black"
+                android:text="no text" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_no_text"
+                style="@style/bnve"
+                app:itemIconTint="@color/item_text_color"
+                app:itemTextColor="@color/item_text_color"
+                app:menu="@menu/menu_navigation" />
+
+            <TextView
+                style="@style/text_black"
+                android:text="no icon" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_no_icon"
+                style="@style/bnve"
+                app:itemIconTint="@color/item_text_color"
+                app:itemTextColor="@color/item_text_color"
+                app:menu="@menu/menu_navigation" />
+
+            <TextView
+                style="@style/text_black"
+                android:text="no animation/ shifting mode" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_no_animation_shifting_mode"
+                style="@style/bnve"
+                app:itemIconTint="@color/item_text_color"
+                app:itemTextColor="@color/item_text_color"
+                app:menu="@menu/menu_navigation" />
+
+            <TextView
+                style="@style/text_black"
+                android:text="no animation/ item shifting mode" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_no_animation_item_shifting_mode"
+                style="@style/bnve"
+                app:itemIconTint="@color/item_text_color"
+                app:itemTextColor="@color/item_text_color"
+                app:menu="@menu/menu_navigation" />
+
+            <TextView
+                style="@style/text_black"
+                android:text="no animation/ shifting mode/ item shifting mode" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_no_animation_shifting_mode_item_shifting_mode"
+                style="@style/bnve"
+                app:itemIconTint="@color/item_text_color"
+                app:itemTextColor="@color/item_text_color"
+                app:menu="@menu/menu_navigation" />
+
+            <TextView
+                style="@style/text_black"
+                android:text="no shifting mode/ item shift mode/ text" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_no_shifting_mode_item_shifting_mode_text"
+                style="@style/bnve"
+                app:itemIconTint="@color/item_text_color"
+                app:itemTextColor="@color/item_text_color"
+                app:menu="@menu/menu_navigation" />
+
+            <TextView
+                style="@style/text_black"
+                android:text="no animation/ shifting mode/ item shifting mode/ text" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_no_animation_shifting_mode_item_shifting_mode_text"
+                style="@style/bnve"
+                app:itemIconTint="@color/item_text_color"
+                app:itemTextColor="@color/item_text_color"
+                app:menu="@menu/menu_navigation" />
+
+            <TextView
+                style="@style/text_black"
+                android:text="no shifting mode/ item shifting mode/ icon" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_no_shifting_mode_item_shifting_mode_and_icon"
+                style="@style/bnve"
+                app:itemIconTint="@color/item_text_color"
+                app:itemTextColor="@color/item_text_color"
+                app:menu="@menu/menu_navigation" />
+
+            <TextView
+                style="@style/text_black"
+                android:text="no item shifting mode/ icon" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_no_item_shifting_mode_icon"
+                style="@style/bnve"
+                app:itemIconTint="@color/item_text_color"
+                app:itemTextColor="@color/item_text_color"
+                app:menu="@menu/menu_navigation" />
+
+            <TextView
+                style="@style/text_black"
+                android:text="no animation/ shifting mode/ item shifting mode/ icon" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_no_animation_shifting_mode_item_shifting_mode_icon"
+                style="@style/bnve"
+                app:itemIconTint="@color/item_text_color"
+                app:itemTextColor="@color/item_text_color"
+                app:menu="@menu/menu_navigation" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

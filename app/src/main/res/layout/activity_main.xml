@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data></data>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/btn_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="不同的样式" />
+
+        <Button
+            android:id="@+id/btn_with_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="配合ViewPager" />
+
+    </LinearLayout>
+
+</layout>

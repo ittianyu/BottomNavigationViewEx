@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music">音乐</string>
+    <string name="backup">云端</string>
+    <string name="friends">朋友圈</string>
+    <string name="favor">收藏</string>
+    <string name="visibility">发现</string>
+    <string name="app_name">BottomNavigationViewEx</string>
+</resources>
