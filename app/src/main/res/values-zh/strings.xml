@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="music">音乐</string>
+    <string name="backup">云端</string>
+    <string name="friends">朋友圈</string>
+    <string name="favor">收藏</string>
+    <string name="visibility">发现</string>
+    <string name="app_name">BottomNavigationViewEx</string>
+    <string name="different_style">不同的样式</string>
+    <string name="with_view_pager">配合ViewPager</string>
+    <string name="badge_view">带数字小红点</string>
+    <string name="face">表情</string>
+    <string name="lamp">灯</string>
+    <string name="weather">天气</string>
+    <string name="tips_badge_removed">Badge 被消除了</string>
+    <string name="center_fab">中间漂浮按钮</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        tools:context=".features.MainActivity">
+
+        <Button
+            android:id="@+id/btn_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/different_style" />
+
+        <Button
+            android:id="@+id/btn_with_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/with_view_pager" />
+
+        <Button
+            android:id="@+id/btn_setup_with_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/setup_with_view_pager" />
+
+        <Button
+            android:id="@+id/btn_badge_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/badge_view" />
+
+        <Button
+            android:id="@+id/btn_center_fab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/center_fab" />
+
+    </LinearLayout>
+
+</layout>

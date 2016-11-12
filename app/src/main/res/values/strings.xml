@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">BottomNavigationViewEx</string>
+
+    <string name="music">Music</string>
+    <string name="backup">Backup</string>
+    <string name="friends">Friends</string>
+    <string name="favor">Favor</string>
+
+    <string name="lamp">Lamp</string>
+    <string name="weather">Weather</string>
+    <string name="face">Face</string>
+
+    <string name="visibility">Visibility</string>
+    <string name="different_style">Different style</string>
+    <string name="with_view_pager">With ViewPager</string>
+
+    <string name="no_animation_shifting_mode_item_shifting_mode_icon" translatable="false">no animation/ shifting mode/ item shifting mode/ icon</string>
+    <string name="no_item_shifting_mode_icon" translatable="false">no item shifting mode/ icon</string>
+    <string name="no_shifting_mode_item_shifting_mode_icon" translatable="false">no shifting mode/ item shifting mode/ icon</string>
+    <string name="no_animation_shifting_mode_item_shifting_mode_text" translatable="false">no animation/ shifting mode/ item shifting mode/ text</string>
+    <string name="no_shifting_mode_item_shift_mode_text" translatable="false">no shifting mode/ item shift mode/ text</string>
+    <string name="no_animation_shifting_mode_item_shifting_mode" translatable="false">no animation/ shifting mode/ item shifting mode</string>
+    <string name="no_animation_item_shifting_mode" translatable="false">no animation/ item shifting mode</string>
+    <string name="no_animation_shifting_mode" translatable="false">no animation/ shifting mode</string>
+    <string name="no_icon" translatable="false">no icon</string>
+    <string name="no_text" translatable="false">no text</string>
+    <string name="no_item_shifting_mode" translatable="false">no item shifting mode</string>
+    <string name="no_shifting_mode" translatable="false">no shifting mode</string>
+    <string name="no_animation" translatable="false">no animation</string>
+    <string name="normal" translatable="false">normal</string>
+    <string name="setup_with_view_pager" translatable="false">setup with view pager</string>
+    <string name="badge_view">badge view</string>
+    <string name="with_padding" translatable="false">with padding</string>
+    <string name="center_icon_only" translatable="false">center icon only</string>
+    <string name="smaller_text" translatable="false">smaller text (custom font size)</string>
+    <string name="bigger_icon" translatable="false">bigger icon (custom icon size)</string>
+    <string name="custom_typeface" translatable="false">custom typeface</string>
+    <string name="icon_selector" translatable="false">icon selector</string>
+    <string name="icon_margin_top" translatable="false">icon margin top</string>
+    <string name="tips_badge_removed" translatable="false">Badge is removed</string>
+    <string name="unchecked_first_time" translatable="false">unchecked first time</string>
+    <string name="center_fab">Center Fab</string>
+
+</resources>
