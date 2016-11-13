@@ -16,7 +16,7 @@
 
             <TextView
                 style="@style/text_black"
-                android:text="normal" />
+                android:text="@string/normal" />
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_normal"
@@ -27,7 +27,7 @@
 
             <TextView
                 style="@style/text_black"
-                android:text="no animation" />
+                android:text="@string/no_animation" />
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_animation"
@@ -38,7 +38,7 @@
 
             <TextView
                 style="@style/text_black"
-                android:text="no shifting mode" />
+                android:text="@string/no_shifting_mode" />
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_shifting_mode"
@@ -49,7 +49,7 @@
 
             <TextView
                 style="@style/text_black"
-                android:text="no item shifting mode" />
+                android:text="@string/no_item_shifting_mode" />
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_item_shifting_mode"
@@ -60,7 +60,7 @@
 
             <TextView
                 style="@style/text_black"
-                android:text="no text" />
+                android:text="@string/no_text" />
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_text"
@@ -71,7 +71,7 @@
 
             <TextView
                 style="@style/text_black"
-                android:text="no icon" />
+                android:text="@string/no_icon" />
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_icon"
@@ -82,7 +82,7 @@
 
             <TextView
                 style="@style/text_black"
-                android:text="no animation/ shifting mode" />
+                android:text="@string/no_animation_shifting_mode" />
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_animation_shifting_mode"
@@ -93,7 +93,7 @@
 
             <TextView
                 style="@style/text_black"
-                android:text="no animation/ item shifting mode" />
+                android:text="@string/no_animation_item_shifting_mode" />
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_animation_item_shifting_mode"
@@ -104,7 +104,7 @@
 
             <TextView
                 style="@style/text_black"
-                android:text="no animation/ shifting mode/ item shifting mode" />
+                android:text="@string/no_animation_shifting_mode_item_shifting_mode" />
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_animation_shifting_mode_item_shifting_mode"
@@ -115,7 +115,7 @@
 
             <TextView
                 style="@style/text_black"
-                android:text="no shifting mode/ item shift mode/ text" />
+                android:text="@string/no_shifting_mode_item_shift_mode_text" />
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_shifting_mode_item_shifting_mode_text"
@@ -126,7 +126,7 @@
 
             <TextView
                 style="@style/text_black"
-                android:text="no animation/ shifting mode/ item shifting mode/ text" />
+                android:text="@string/no_animation_shifting_mode_item_shifting_mode_text" />
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_animation_shifting_mode_item_shifting_mode_text"
@@ -137,7 +137,7 @@
 
             <TextView
                 style="@style/text_black"
-                android:text="no shifting mode/ item shifting mode/ icon" />
+                android:text="@string/no_shifting_mode_item_shifting_mode_icon" />
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_shifting_mode_item_shifting_mode_and_icon"
@@ -148,7 +148,7 @@
 
             <TextView
                 style="@style/text_black"
-                android:text="no item shifting mode/ icon" />
+                android:text="@string/no_item_shifting_mode_icon" />
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_item_shifting_mode_icon"
@@ -159,7 +159,7 @@
 
             <TextView
                 style="@style/text_black"
-                android:text="no animation/ shifting mode/ item shifting mode/ icon" />
+                android:text="@string/no_animation_shifting_mode_item_shifting_mode_icon" />
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_animation_shifting_mode_item_shifting_mode_icon"

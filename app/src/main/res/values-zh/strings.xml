@@ -6,4 +6,6 @@
     <string name="favor">收藏</string>
     <string name="visibility">发现</string>
     <string name="app_name">BottomNavigationViewEx</string>
+    <string name="different_style">不同的样式</string>
+    <string name="with_view_pager">配合ViewPager</string>
 </resources>

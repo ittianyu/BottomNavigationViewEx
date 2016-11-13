@@ -17,13 +17,13 @@
             android:id="@+id/btn_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="不同的样式" />
+            android:text="@string/different_style" />
 
         <Button
             android:id="@+id/btn_with_view_pager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="配合ViewPager" />
+            android:text="@string/with_view_pager" />
 
     </LinearLayout>
 
