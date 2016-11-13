@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WithViewPagerActivity extends AppCompatActivity {
+    private static final String TAG = "WithViewPagerActivity";
     private ActivityWithViewPagerBinding binding;
     private List<Item> items;
     private VpAdapter adapter;
@@ -114,7 +116,12 @@ public class WithViewPagerActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                binding.bnve.setCurrentItem(position);
+                // check whether current item is equal position
+                if (binding.bnve.getCurrentItem() != position) {
+                    // only set item when scroll view pager by hand
+                    binding.bnve.setCurrentItem(position);
+                    Log.i(TAG, "setCurrentItem:" + position);
+                }
             }
 
             @Override

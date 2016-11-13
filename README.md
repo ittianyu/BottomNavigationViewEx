@@ -12,6 +12,9 @@ An android lib for enhancing BottomNavigationView.
 
 ## Feature ##
 
+- ### getCurrentItem ###
+	Get current checked item
+
 - ### setCurrentItem ###
 	Set current checked item
 
@@ -91,7 +94,7 @@ allprojects {
 
 Step 2. Add the dependency
 ```
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.0.0'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.0'
 ```
 
 #### and for Maven: ####
@@ -111,7 +114,7 @@ Step 2. Add the dependency
 <dependency>
     <groupId>com.github.ittianyu</groupId>
     <artifactId>BottomNavigationViewEx</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 
@@ -152,6 +155,8 @@ bnve.setTextVisibility(false);
 bnve.setIconVisibility(false);
 
 bnve.setCurrentItem(1);
+
+bnve.getCurrentItem();
 ```
 
 Other usage is the same as official `BottomNavigationView`.
@@ -208,6 +213,9 @@ You no need to worry about stability. Because I minimise modifying by reflecting
 
 
 ## 功能 ##
+
+- ### getCurrentItem ###
+	获取当前选中的项
 
 - ### setCurrentItem ###
 	设置当前选中的项
@@ -288,7 +296,7 @@ allprojects {
 
 步骤 2. 添加依赖
 ```
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.0.0'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.0'
 ```
 
 #### Maven例子: ####
@@ -308,7 +316,7 @@ compile 'com.github.ittianyu:BottomNavigationViewEx:1.0.0'
 <dependency>
     <groupId>com.github.ittianyu</groupId>
     <artifactId>BottomNavigationViewEx</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 
@@ -349,6 +357,8 @@ bnve.setTextVisibility(false);
 bnve.setIconVisibility(false);
 
 bnve.setCurrentItem(1);
+
+bnve.getCurrentItem();
 ```
 
 其他用法和官方 `BottomNavigationView` 一样。

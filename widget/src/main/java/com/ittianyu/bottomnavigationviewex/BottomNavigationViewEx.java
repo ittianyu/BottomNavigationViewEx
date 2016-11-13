@@ -7,6 +7,7 @@ import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.util.AttributeSet;
 import android.util.TypedValue;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -313,9 +314,38 @@ public class BottomNavigationViewEx extends BottomNavigationView {
     }
 
     /**
+     * get the current checked item position
+     * @return index of item, start from 0.
+     */
+    public int getCurrentItem() {
+        /*
+        1. get field in this class
+        private final BottomNavigationMenuView mMenuView;
+
+        2. get field in mMenuView
+        private BottomNavigationItemView[] mButtons;
+
+        3. get menu and traverse it to get the checked one
+         */
+
+        // 1. get mMenuView
+        BottomNavigationMenuView mMenuView = getField(getClass().getSuperclass(), this, "mMenuView", BottomNavigationMenuView.class);
+        // 2. get mButtons
+        BottomNavigationItemView[] mButtons = getField(mMenuView.getClass(), mMenuView, "mButtons", BottomNavigationItemView[].class);
+        // 3. get menu and traverse it to get the checked one
+        Menu menu = getMenu();
+        for (int i = 0; i < mButtons.length; i++) {
+            if (menu.getItem(i).isChecked()) {
+                return i;
+            }
+        }
+        return 0;
+    }
+
+    /**
      * set the current checked item
      *
-     * @param item from 0 to n-1
+     * @param item start from 0.
      */
     public void setCurrentItem(int item) {
         // check bounds
@@ -341,7 +371,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
         // get mOnClickListener
         View.OnClickListener mOnClickListener = getField(mMenuView.getClass(), mMenuView, "mOnClickListener", View.OnClickListener.class);
 
-        System.out.println("mMenuView:" + mMenuView + " mButtons:" + mButtons + " mOnClickListener" + mOnClickListener);
+//        System.out.println("mMenuView:" + mMenuView + " mButtons:" + mButtons + " mOnClickListener" + mOnClickListener);
         // 3. call mOnClickListener.onClick();
         mOnClickListener.onClick(mButtons[item]);
 
@@ -374,7 +404,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
      * change the field value
      *
      * @param targetClass
-     * @param instance
+     * @param instance      the filed owner
      * @param fieldName
      * @param value
      */
