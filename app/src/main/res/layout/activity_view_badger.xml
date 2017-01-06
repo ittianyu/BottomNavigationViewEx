@@ -7,7 +7,7 @@
     android:id="@+id/rl_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ittianyu.bottomnavigationviewexsample.viewbadger.ViewBadgerActivity">
+    tools:context=".features.viewbadger.ViewBadgerActivity">
 
     <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
         android:id="@+id/bnve"

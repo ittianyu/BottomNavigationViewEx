@@ -1,4 +1,4 @@
-package com.ittianyu.bottomnavigationviewexsample.setupwithviewpager;
+package com.ittianyu.bottomnavigationviewexsample.features.viewpager;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -7,23 +7,26 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.util.SparseArray;
 import android.view.MenuItem;
 
-import com.ittianyu.bottomnavigationviewexsample.BaseFragment;
+import com.ittianyu.bottomnavigationviewexsample.common.base.BaseFragment;
 import com.ittianyu.bottomnavigationviewexsample.R;
 import com.ittianyu.bottomnavigationviewexsample.databinding.ActivityWithViewPagerBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SetupWithViewPagerActivity extends AppCompatActivity {
-    private static final String TAG = SetupWithViewPagerActivity.class.getSimpleName();
+public class WithViewPagerActivity extends AppCompatActivity {
+    private static final String TAG = WithViewPagerActivity.class.getSimpleName();
     private ActivityWithViewPagerBinding bind;
     private VpAdapter adapter;
 
     // collections
+    private SparseArray<Integer> items;// used for change ViewPager selected item
     private List<Fragment> fragments;// used for ViewPager adapter
 
     @Override
@@ -50,6 +53,7 @@ public class SetupWithViewPagerActivity extends AppCompatActivity {
      */
     private void initData() {
         fragments = new ArrayList<>(3);
+        items = new SparseArray<>(3);
 
         // create music fragment and add it
         BaseFragment musicFragment = new BaseFragment();
@@ -74,28 +78,74 @@ public class SetupWithViewPagerActivity extends AppCompatActivity {
         fragments.add(backupFragment);
         fragments.add(friendsFragment);
 
+        // add to items for change ViewPager item
+        items.put(R.id.menu_music, 0);
+        items.put(R.id.menu_backup, 1);
+        items.put(R.id.menu_friends, 2);
+
         // set adapter
         adapter = new VpAdapter(getSupportFragmentManager(), fragments);
         bind.vp.setAdapter(adapter);
-
-        // binding with ViewPager
-        bind.bnve.setupWithViewPager(bind.vp);
     }
 
     /**
      * set listeners
      */
     private void initEvent() {
-        // set listener to do something then item selected
+        // set listener to change the current item of view pager when click bottom nav item
         bind.bnve.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            private int previousPosition = -1;
+
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Log.d(TAG, item.getItemId() + " item was selected-------------------");
-                // you can return false to cancel select
+//                int id = 0;
+//                switch (item.getItemId()) {
+//                    case R.id.menu_music:
+//                        id = 0;
+//                        break;
+//                    case R.id.menu_backup:
+//                        id = 1;
+//                        break;
+//                    case R.id.menu_friends:
+//                        id = 2;
+//                        break;
+//                }
+//                if(previousPosition != id) {
+//                  bind.vp.setCurrentItem(id, false);
+//                  previousPosition = id;
+//                }
+
+                // you can write as above.
+                // I recommend this method. You can change the item order or counts without update code here.
+                int position = items.get(item.getItemId());
+                if (previousPosition != position) {
+                    // only set item when item changed
+                    previousPosition = position;
+                    Log.i(TAG, "-----bnve-------- previous item:" + bind.bnve.getCurrentItem() + " current item:" + position + " ------------------");
+                    bind.vp.setCurrentItem(position);
+                }
                 return true;
             }
         });
 
+        // set listener to change the current checked item of bottom nav when scroll view pager
+        bind.vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                Log.i(TAG, "-----ViewPager-------- previous item:" + bind.bnve.getCurrentItem() + " current item:" + position + " ------------------");
+                bind.bnve.setCurrentItem(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     /**

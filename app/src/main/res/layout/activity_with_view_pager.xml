@@ -8,7 +8,7 @@
         android:id="@+id/activity_with_view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".viewpager.WithViewPagerActivity">
+        tools:context=".features.viewpager.WithViewPagerActivity">
 
         <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
             android:id="@+id/bnve"

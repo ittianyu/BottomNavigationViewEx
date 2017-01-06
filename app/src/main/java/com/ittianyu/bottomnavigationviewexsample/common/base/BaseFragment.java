@@ -1,4 +1,4 @@
-package com.ittianyu.bottomnavigationviewexsample;
+package com.ittianyu.bottomnavigationviewexsample.common.base;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;

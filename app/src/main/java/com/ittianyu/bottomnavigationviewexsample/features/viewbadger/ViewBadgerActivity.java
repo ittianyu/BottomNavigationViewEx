@@ -1,4 +1,4 @@
-package com.ittianyu.bottomnavigationviewexsample.viewbadger;
+package com.ittianyu.bottomnavigationviewexsample.features.viewbadger;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -45,10 +45,10 @@ public class ViewBadgerActivity extends AppCompatActivity {
                         int position = bind.bnve.getMenuItemPosition(item);
                         switch (position) {
                             case 1:
-                                badgeView1.toggle(true);
+                                badgeView1.toggle(false);
                                 break;
                             case 3:
-                                badgeView3.toggle(true);
+                                badgeView3.toggle(false);
                                 break;
                         }
                         return true;

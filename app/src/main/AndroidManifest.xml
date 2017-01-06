@@ -3,26 +3,27 @@
     package="com.ittianyu.bottomnavigationviewexsample">
 
     <application
+        android:name=".common.base.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".features.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".style.StyleActivity" />
+        <activity android:name=".features.style.StyleActivity" />
         <activity
-            android:name=".viewpager.WithViewPagerActivity"
+            android:name=".features.viewpager.WithViewPagerActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".setupwithviewpager.SetupWithViewPagerActivity"
+            android:name=".features.setupwithviewpager.SetupWithViewPagerActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".viewbadger.ViewBadgerActivity"></activity>
+        <activity android:name=".features.viewbadger.ViewBadgerActivity"></activity>
     </application>
 
 </manifest>
