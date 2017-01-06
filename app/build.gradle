@@ -31,4 +31,5 @@ dependencies {
     compile 'com.android.support:design:25.0.1'
     testCompile 'junit:junit:4.12'
     compile project(':widget')
+    compile files('libs/android-viewbadger.jar')
 }

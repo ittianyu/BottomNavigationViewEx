@@ -7,7 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.ittianyu.bottomnavigationviewexsample.databinding.ActivityMainBinding;
+import com.ittianyu.bottomnavigationviewexsample.setupwithviewpager.SetupWithViewPagerActivity;
 import com.ittianyu.bottomnavigationviewexsample.style.StyleActivity;
+import com.ittianyu.bottomnavigationviewexsample.viewbadger.ViewBadgerActivity;
 import com.ittianyu.bottomnavigationviewexsample.viewpager.WithViewPagerActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void init() {
         binding.btnStyle.setOnClickListener(this);
         binding.btnWithViewPager.setOnClickListener(this);
+        binding.btnSetupWithViewPager.setOnClickListener(this);
+        binding.btnViewBadger.setOnClickListener(this);
     }
 
 
@@ -37,6 +41,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_with_view_pager:
                 startActivity(new Intent(this, WithViewPagerActivity.class));
                 break;
+            case R.id.btn_setup_with_view_pager:
+                startActivity(new Intent(this, SetupWithViewPagerActivity.class));
+                break;
+            case R.id.btn_view_badger:
+                startActivity(new Intent(this, ViewBadgerActivity.class));
+                break;
+
         }
     }
 }

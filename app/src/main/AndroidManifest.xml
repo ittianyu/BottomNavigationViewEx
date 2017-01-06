@@ -8,15 +8,21 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.ittianyu.bottomnavigationviewexsample.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.ittianyu.bottomnavigationviewexsample.style.StyleActivity" />
-        <activity android:name="com.ittianyu.bottomnavigationviewexsample.viewpager.WithViewPagerActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".style.StyleActivity" />
+        <activity
+            android:name=".viewpager.WithViewPagerActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".setupwithviewpager.SetupWithViewPagerActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".viewbadger.ViewBadgerActivity"></activity>
     </application>
 
 </manifest>

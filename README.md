@@ -12,29 +12,26 @@ An android lib for enhancing BottomNavigationView.
 
 ## Feature ##
 
-- ### getCurrentItem ###
-	Get current checked item
-
-- ### setCurrentItem ###
-	Set current checked item
-
-- ### enableShiftingMode ###
-	Open or close shifting mode for navigation bar
-
-- ### enableItemShiftingMode ###
-	Open or close shifting mode for menu item
-
-- ### enableAnimation ###
-	Open or close animation for menu item
-
-- ### setTextVisibility ###
-	Set the visibility of text
-
-- ### setIconVisibility ###
-	Set the visibility of icon
+|methods|description
+|---|---|
+|enableAnimation|Enable or disable click item animation(text scale and icon move animation in no item shifting mode). Default true.
+|enableItemShiftingMode|Enable the shifting mode for each item. It will has a shift animation for item if true. Otherwise the item text always be shown. Default true when item count > 3.
+|enableShiftingMode|Enable the shifting mode for navigation. It will has a shift animation if true. Otherwise all items are the same width. Default true when item count > 3.
+|getBottomNavigationItemView|Get private mButton in mMenuView at position
+|getBottomNavigationItemViews|Get private mButtons in mMenuView
+|getCurrentItem|Get the current checked item position.
+|getIconAt|Get icon at position.
+|getMenuItemPosition|Get menu item position in menu. Return position if success, -1 otherwise.
+|getOnNavigationItemSelectedListener|Get OnNavigationItemSelectedListener.
+|setCurrentItem|Set the current checked item.
+|setIconVisibility|Change the visibility of icon.
+|setTextVisibility|Change the visibility of text.
+|setupWithViewPager|This method will link the given ViewPager and this BottomNavigationViewEx together so that changes in one are automatically reflected in the other. This includes scroll state changes and clicks.
 
 
 ## Example ##
+
+**Style**
 
 ![](/read_me_images/normal.gif)
 
@@ -68,6 +65,9 @@ An android lib for enhancing BottomNavigationView.
 
 ![](/read_me_images/with_view_pager.gif)
 
+**Add ViewBadger**
+
+![](/read_me_images/view_badger.gif)
 
 ## Adding to project ##
 
@@ -75,7 +75,7 @@ An android lib for enhancing BottomNavigationView.
 `compileSdkVersion` >= 25 and add `design` :
 
 ```
-compile 'com.android.support:design:25.0.0'
+compile 'com.android.support:design:25.0.1'
 ```
 
 ### Importing to project ###
@@ -94,7 +94,7 @@ allprojects {
 
 Step 2. Add the dependency
 ```
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.0'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.1'
 ```
 
 #### and for Maven: ####
@@ -114,7 +114,7 @@ Step 2. Add the dependency
 <dependency>
     <groupId>com.github.ittianyu</groupId>
     <artifactId>BottomNavigationViewEx</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
 </dependency>
 ```
 
@@ -126,7 +126,6 @@ Downloading [BottomNavigationViewEx.java](https://raw.githubusercontent.com/itti
 ## Getting started ##
 
 Adding a custom widget in `xml` :
-
 ```xml
 <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
     android:id="@+id/bnve"
@@ -134,33 +133,40 @@ Adding a custom widget in `xml` :
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
     app:itemBackground="@color/colorPrimary"
-    app:itemIconTint="@color/item_text_color"
-    app:itemTextColor="@color/item_text_color"
+    app:itemIconTint="@color/selector_item_color"
+    app:itemTextColor="@color/selector_item_color"
     app:menu="@menu/menu_navigation_with_view_pager" />
 ```
 
-Binding view in `Activity` and setting style:
-
+Binding view in `Activity`:
 ```java
 BottomNavigationViewEx bnve = (BottomNavigationViewEx) findViewById(R.id.bnve);
-
-bnve.enableAnimation(false);
-
-bnve.enableShiftingMode(false);
-
-bnve.enableItemShiftingMode(false);
-
-bnve.setTextVisibility(false);
-
-bnve.setIconVisibility(false);
-
-bnve.setCurrentItem(1);
-
-bnve.getCurrentItem();
 ```
 
+#### Disable all animations ####
+```java
+bnve.enableAnimation(false);
+bnve.enableShiftingMode(false);
+bnve.enableItemShiftingMode(false);
+```
+
+#### Binding with ViewPager ####
+```java
+// set adapter
+adapter = new VpAdapter(getSupportFragmentManager(), fragments);
+bind.vp.setAdapter(adapter);
+
+// binding with ViewPager
+bind.bnve.setupWithViewPager(bind.vp);
+```
+
+#### Other usage in BottomNavigationViewEx ####
+You can see the demo.
+
+#### Usage in BottomNavigationView ####
 Other usage is the same as official `BottomNavigationView`.
 You can [click here](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html) for detail.
+
 
 ## References ##
 
@@ -214,29 +220,26 @@ You no need to worry about stability. Because I minimise modifying by reflecting
 
 ## 功能 ##
 
-- ### getCurrentItem ###
-	获取当前选中的项
-
-- ### setCurrentItem ###
-	设置当前选中的项
-
-- ### enableShiftingMode ###
-	开启或关闭导航条的位移模式
-
-- ### enableItemShiftingMode ###
-	开启或关闭子菜单的位移模式
-
-- ### enableAnimation ###
-	开启或关闭子菜单的文字和图片动画
-
-- ### setTextVisibility ###
-	设置子菜单文本可见性
-
-- ### setIconVisibility ###
-	设置子菜单图片可见性
+|methods|description
+|---|---|
+|enableAnimation|开启或关闭点击动画(文字放大效果和图片移动效果)。 默认为 true.
+|enableItemShiftingMode|开始或关闭子菜单位移模式。 如果为 true，除了当前选中项，其他项的文本将会隐藏。 当菜单数大于3时，默认为 true。
+|enableShiftingMode|开始或关闭导航条位移模式。如果为 true，选中项和其他项的宽度不一样。当菜单数大于3时，默认为 true。
+|getBottomNavigationItemView|获取位于 position 的私有成员变量 mButton。
+|getBottomNavigationItemViews|获取私有成员变量 mButtons。
+|getCurrentItem|获取当前选中项的索引。
+|getIconAt|获取位于 position 的图片.
+|getMenuItemPosition|获取子菜单的索引。如果找不到，返回 -1。
+|getOnNavigationItemSelectedListener|获取 OnNavigationItemSelectedListener。
+|setCurrentItem|设置当前选中项。
+|setIconVisibility|设置图片可见性。
+|setTextVisibility|设置文本可见性。
+|setupWithViewPager|和 ViewPager 绑定，当 任何一个选中项改变时，都会自动改变另一项。
 
 
 ## 例子 ##
+
+**样式**
 
 ![](/read_me_images/normal.gif)
 
@@ -266,9 +269,14 @@ You no need to worry about stability. Because I minimise modifying by reflecting
 
 ![](/read_me_images/no_animation_shifting_mode_item_shifting_mode_icon.gif)
 
-**With ViewPager**
+**和 ViewPager 一起使用**
 
 ![](/read_me_images/with_view_pager.gif)
+
+**带数字的小红圈**
+
+![](/read_me_images/view_badger.gif)
+
 
 
 ## 加入工程 ##
@@ -277,7 +285,7 @@ You no need to worry about stability. Because I minimise modifying by reflecting
 `compileSdkVersion` >= 25 且添加 `design` 依赖包:
 
 ```
-compile 'com.android.support:design:25.0.0'
+compile 'com.android.support:design:25.0.1'
 ```
 
 ### 导入本库 ###
@@ -296,7 +304,7 @@ allprojects {
 
 步骤 2. 添加依赖
 ```
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.0'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.1'
 ```
 
 #### Maven例子: ####
@@ -316,7 +324,7 @@ compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.0'
 <dependency>
     <groupId>com.github.ittianyu</groupId>
     <artifactId>BottomNavigationViewEx</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
 </dependency>
 ```
 
@@ -327,8 +335,8 @@ compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.0'
 
 ## 开始使用 ##
 
-在 `xml` 布局中添加自定义控件:
 
+在 `xml` 布局中添加自定义控件:
 ```xml
 <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
     android:id="@+id/bnve"
@@ -336,31 +344,37 @@ compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.0'
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
     app:itemBackground="@color/colorPrimary"
-    app:itemIconTint="@color/item_text_color"
-    app:itemTextColor="@color/item_text_color"
+    app:itemIconTint="@color/selector_item_color"
+    app:itemTextColor="@color/selector_item_color"
     app:menu="@menu/menu_navigation_with_view_pager" />
 ```
 
-在 `Activity` 中绑定控件，并设置样式:
-
+在 `Activity` 中绑定控件:
 ```java
 BottomNavigationViewEx bnve = (BottomNavigationViewEx) findViewById(R.id.bnve);
-
-bnve.enableAnimation(false);
-
-bnve.enableShiftingMode(false);
-
-bnve.enableItemShiftingMode(false);
-
-bnve.setTextVisibility(false);
-
-bnve.setIconVisibility(false);
-
-bnve.setCurrentItem(1);
-
-bnve.getCurrentItem();
 ```
 
+#### 禁止所有动画效果 ####
+```java
+bnve.enableAnimation(false);
+bnve.enableShiftingMode(false);
+bnve.enableItemShiftingMode(false);
+```
+
+#### 和 ViewPager 绑定####
+```java
+// set adapter
+adapter = new VpAdapter(getSupportFragmentManager(), fragments);
+bind.vp.setAdapter(adapter);
+
+// binding with ViewPager
+bind.bnve.setupWithViewPager(bind.vp);
+```
+
+#### 其他 BottomNavigationViewEx 的用法 ####
+请参考demo。
+
+#### 其他 BottomNavigationView 的用法 ####
 其他用法和官方 `BottomNavigationView` 一样。
 详情[点击这里](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html)
 

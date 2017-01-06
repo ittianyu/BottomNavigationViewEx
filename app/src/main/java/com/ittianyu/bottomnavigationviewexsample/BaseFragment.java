@@ -1,4 +1,4 @@
-package com.ittianyu.bottomnavigationviewexsample.viewpager;
+package com.ittianyu.bottomnavigationviewexsample;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
