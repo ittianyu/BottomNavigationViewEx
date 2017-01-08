@@ -74,7 +74,7 @@ An android lib for enhancing BottomNavigationView.
 ### Dependency ###
 `compileSdkVersion` >= 25 and add `design` :
 
-```
+```groovy
 compile 'com.android.support:design:25.0.1'
 ```
 
@@ -83,7 +83,7 @@ compile 'com.android.support:design:25.0.1'
 #### Example for Gradle: ####
 
 Step 1. Add it in your root build.gradle at the end of repositories:
-```
+```groovy
 allprojects {
 	repositories {
 		...
@@ -93,14 +93,14 @@ allprojects {
 ```
 
 Step 2. Add the dependency
-```
+```groovy
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.1'
 ```
 
 #### and for Maven: ####
 
 Step 1. Add it in your root build.gradle at the end of repositories:
-```
+```xml
 <repositories>
 	<repository>
 	    <id>jitpack.io</id>
@@ -110,7 +110,7 @@ Step 1. Add it in your root build.gradle at the end of repositories:
 ```
 
 Step 2. Add the dependency
-```
+```xml
 <dependency>
     <groupId>com.github.ittianyu</groupId>
     <artifactId>BottomNavigationViewEx</artifactId>
