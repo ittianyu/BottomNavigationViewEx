@@ -10,9 +10,9 @@ An android lib for enhancing BottomNavigationView.
 ## About Us ##
 [![天宇工作室](https://github.com/ittianyu/MobileGuard/blob/master/read_me_images/logo-transparent.png?raw=true)](http://www.ittianyu.com)
 
-## Feature ##
+## Features ##
 
-|methods|description
+|Method|Description
 |---|---|
 |enableAnimation|Enable or disable click item animation(text scale and icon move animation in no item shifting mode). Default true.
 |enableItemShiftingMode|Enable the shifting mode for each item. It will has a shift animation for item if true. Otherwise the item text always be shown. Default true when item count > 3.
@@ -74,7 +74,7 @@ An android lib for enhancing BottomNavigationView.
 ### Dependency ###
 `compileSdkVersion` >= 25 and add `design` :
 
-```
+```groovy
 compile 'com.android.support:design:25.0.1'
 ```
 
@@ -83,7 +83,7 @@ compile 'com.android.support:design:25.0.1'
 #### Example for Gradle: ####
 
 Step 1. Add it in your root build.gradle at the end of repositories:
-```
+```groovy
 allprojects {
 	repositories {
 		...
@@ -93,14 +93,14 @@ allprojects {
 ```
 
 Step 2. Add the dependency
-```
+```groovy
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.1'
 ```
 
 #### and for Maven: ####
 
 Step 1. Add it in your root build.gradle at the end of repositories:
-```
+```xml
 <repositories>
 	<repository>
 	    <id>jitpack.io</id>
@@ -110,7 +110,7 @@ Step 1. Add it in your root build.gradle at the end of repositories:
 ```
 
 Step 2. Add the dependency
-```
+```xml
 <dependency>
     <groupId>com.github.ittianyu</groupId>
     <artifactId>BottomNavigationViewEx</artifactId>
@@ -284,7 +284,7 @@ You no need to worry about stability. Because I minimise modifying by reflecting
 ### 依赖 ###
 `compileSdkVersion` >= 25 且添加 `design` 依赖包:
 
-```
+```groovy
 compile 'com.android.support:design:25.0.1'
 ```
 
@@ -293,7 +293,7 @@ compile 'com.android.support:design:25.0.1'
 #### Gradle例子: ####
 
 步骤 1. 在工程根目录的 `build.gradle` 最后添加如下代码:
-```
+```groovy
 allprojects {
 	repositories {
 		...
@@ -303,14 +303,14 @@ allprojects {
 ```
 
 步骤 2. 添加依赖
-```
+```groovy
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.1'
 ```
 
 #### Maven例子: ####
 
 步骤 1. 在工程根目录的 `build.gradle` 最后添加如下代码:
-```
+```xml
 <repositories>
 	<repository>
 	    <id>jitpack.io</id>
@@ -320,7 +320,7 @@ compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.1'
 ```
 
 步骤 2. 添加依赖
-```
+```xml
 <dependency>
     <groupId>com.github.ittianyu</groupId>
     <artifactId>BottomNavigationViewEx</artifactId>
