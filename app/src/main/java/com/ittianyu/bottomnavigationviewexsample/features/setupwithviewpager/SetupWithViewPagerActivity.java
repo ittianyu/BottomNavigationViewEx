@@ -41,8 +41,8 @@ public class SetupWithViewPagerActivity extends AppCompatActivity {
      * change BottomNavigationViewEx style
      */
     private void initView() {
-        bind.bnve.enableItemShiftingMode(true);
-        bind.bnve.enableAnimation(false);
+//        bind.bnve.enableItemShiftingMode(true);
+//        bind.bnve.enableAnimation(false);
     }
 
     /**

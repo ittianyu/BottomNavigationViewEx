@@ -5,15 +5,12 @@
         android:checked="true"
         android:icon="@drawable/ic_audiotrack_black_24dp"
         android:title="@string/music" />
-
     <item
         android:id="@+id/menu_backup"
         android:icon="@drawable/ic_backup_black_24dp"
         android:title="@string/backup" />
-
     <item
         android:id="@+id/menu_friends"
         android:icon="@drawable/ic_camera_black_24dp"
         android:title="@string/friends" />
-
 </menu>
