@@ -1,4 +1,4 @@
-package com.ittianyu.bottomnavigationviewexsample.features.viewbadger;
+package com.ittianyu.bottomnavigationviewexsample.features.badgeview;
 
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
@@ -17,7 +17,7 @@ import com.allenliu.badgeview.BadgeView;
 import com.ittianyu.bottomnavigationviewexsample.R;
 import com.ittianyu.bottomnavigationviewexsample.databinding.ActivityViewBadgerBinding;
 
-public class ViewBadgerActivity extends AppCompatActivity {
+public class BadgeViewActivity extends AppCompatActivity {
     private ActivityViewBadgerBinding bind;
     private BadgeView badgeView1;
     private BadgeView badgeView3;

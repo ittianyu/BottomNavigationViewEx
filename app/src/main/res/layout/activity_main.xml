@@ -32,10 +32,10 @@
             android:text="@string/setup_with_view_pager" />
 
         <Button
-            android:id="@+id/btn_view_badger"
+            android:id="@+id/btn_badge_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/view_badger" />
+            android:text="@string/badge_view" />
 
     </LinearLayout>
 

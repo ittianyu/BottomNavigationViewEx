@@ -10,7 +10,7 @@ import com.ittianyu.bottomnavigationviewexsample.R;
 import com.ittianyu.bottomnavigationviewexsample.databinding.ActivityMainBinding;
 import com.ittianyu.bottomnavigationviewexsample.features.setupwithviewpager.SetupWithViewPagerActivity;
 import com.ittianyu.bottomnavigationviewexsample.features.style.StyleActivity;
-import com.ittianyu.bottomnavigationviewexsample.features.viewbadger.ViewBadgerActivity;
+import com.ittianyu.bottomnavigationviewexsample.features.badgeview.BadgeViewActivity;
 import com.ittianyu.bottomnavigationviewexsample.features.viewpager.WithViewPagerActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.btnStyle.setOnClickListener(this);
         binding.btnWithViewPager.setOnClickListener(this);
         binding.btnSetupWithViewPager.setOnClickListener(this);
-        binding.btnViewBadger.setOnClickListener(this);
+        binding.btnBadgeView.setOnClickListener(this);
     }
 
 
@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_setup_with_view_pager:
                 startActivity(new Intent(this, SetupWithViewPagerActivity.class));
                 break;
-            case R.id.btn_view_badger:
-                startActivity(new Intent(this, ViewBadgerActivity.class));
+            case R.id.btn_badge_view:
+                startActivity(new Intent(this, BadgeViewActivity.class));
                 break;
 
         }

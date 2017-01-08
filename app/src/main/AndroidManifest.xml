@@ -23,7 +23,7 @@
         <activity
             android:name=".features.setupwithviewpager.SetupWithViewPagerActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".features.viewbadger.ViewBadgerActivity"></activity>
+        <activity android:name=".features.badgeview.BadgeViewActivity"></activity>
     </application>
 
 </manifest>

@@ -22,5 +22,5 @@
     <string name="no_animation">no animation</string>
     <string name="normal">normal</string>
     <string name="setup_with_view_pager">setup with view pager</string>
-    <string name="view_badger">view badger</string>
+    <string name="badge_view">badge view</string>
 </resources>
