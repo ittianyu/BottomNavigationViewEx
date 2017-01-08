@@ -15,18 +15,18 @@ import android.widget.ImageView;
 import com.allenliu.badgeview.BadgeFactory;
 import com.allenliu.badgeview.BadgeView;
 import com.ittianyu.bottomnavigationviewexsample.R;
-import com.ittianyu.bottomnavigationviewexsample.databinding.ActivityViewBadgerBinding;
+import com.ittianyu.bottomnavigationviewexsample.databinding.ActivityBadgeViewBinding;
 
 public class BadgeViewActivity extends AppCompatActivity {
-    private ActivityViewBadgerBinding bind;
+    private ActivityBadgeViewBinding bind;
     private BadgeView badgeView1;
     private BadgeView badgeView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_view_badger);
-        bind = DataBindingUtil.setContentView(this, R.layout.activity_view_badger);
+//        setContentView(R.layout.activity_badge_view);
+        bind = DataBindingUtil.setContentView(this, R.layout.activity_badge_view);
 
         initView();
     }

@@ -10,11 +10,11 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.util.SparseArray;
+import android.util.SparseIntArray;
 import android.view.MenuItem;
 
-import com.ittianyu.bottomnavigationviewexsample.common.base.BaseFragment;
 import com.ittianyu.bottomnavigationviewexsample.R;
+import com.ittianyu.bottomnavigationviewexsample.common.base.BaseFragment;
 import com.ittianyu.bottomnavigationviewexsample.databinding.ActivityWithViewPagerBinding;
 
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class WithViewPagerActivity extends AppCompatActivity {
     private VpAdapter adapter;
 
     // collections
-    private SparseArray<Integer> items;// used for change ViewPager selected item
+    private SparseIntArray items;// used for change ViewPager selected item
     private List<Fragment> fragments;// used for ViewPager adapter
 
     @Override
@@ -53,7 +53,7 @@ public class WithViewPagerActivity extends AppCompatActivity {
      */
     private void initData() {
         fragments = new ArrayList<>(3);
-        items = new SparseArray<>(3);
+        items = new SparseIntArray(3);
 
         // create music fragment and add it
         BaseFragment musicFragment = new BaseFragment();

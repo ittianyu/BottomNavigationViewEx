@@ -14,22 +14,22 @@ import com.ittianyu.bottomnavigationviewexsample.features.badgeview.BadgeViewAct
 import com.ittianyu.bottomnavigationviewexsample.features.viewpager.WithViewPagerActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private ActivityMainBinding binding;
+    private ActivityMainBinding bind;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_main);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        bind = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         init();
     }
 
     private void init() {
-        binding.btnStyle.setOnClickListener(this);
-        binding.btnWithViewPager.setOnClickListener(this);
-        binding.btnSetupWithViewPager.setOnClickListener(this);
-        binding.btnBadgeView.setOnClickListener(this);
+        bind.btnStyle.setOnClickListener(this);
+        bind.btnWithViewPager.setOnClickListener(this);
+        bind.btnSetupWithViewPager.setOnClickListener(this);
+        bind.btnBadgeView.setOnClickListener(this);
     }
 
 

@@ -9,7 +9,7 @@ import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
-import android.util.SparseArray;
+import android.util.SparseIntArray;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -625,21 +625,21 @@ public class BottomNavigationViewEx extends BottomNavigationView {
      */
     private static class MyOnNavigationItemSelectedListener implements OnNavigationItemSelectedListener {
         private OnNavigationItemSelectedListener listener;
-        private ViewPager viewPager;
+        private final WeakReference<ViewPager> viewPagerRef;
         private boolean smoothScroll;
-        private SparseArray<Integer> items;// used for change ViewPager selected item
+        private SparseIntArray items;// used for change ViewPager selected item
         private int previousPosition = -1;
 
 
         MyOnNavigationItemSelectedListener(ViewPager viewPager, BottomNavigationViewEx bnve, boolean smoothScroll, OnNavigationItemSelectedListener listener) {
-            this.viewPager = viewPager;
+            this.viewPagerRef = new WeakReference<>(viewPager);
             this.listener = listener;
             this.smoothScroll = smoothScroll;
 
             // create items
             Menu menu = bnve.getMenu();
             int size = menu.size();
-            items = new SparseArray<>(size);
+            items = new SparseIntArray(size);
             for (int i = 0; i < size; i++) {
                 int itemId = menu.getItem(i).getItemId();
                 items.put(itemId, i);
@@ -649,7 +649,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
         public void setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener listener) {
             this.listener = listener;
         }
-
+        
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             int position = items.get(item.getItemId());
@@ -665,11 +665,16 @@ public class BottomNavigationViewEx extends BottomNavigationView {
                 if (!bool)
                     return false;
             }
-            // update previous position
-            previousPosition = position;
 
             // change view pager
+            ViewPager viewPager = viewPagerRef.get();
+            if (null == viewPager)
+                return false;
+
             viewPager.setCurrentItem(items.get(item.getItemId()), smoothScroll);
+
+            // update previous position
+            previousPosition = position;
 
             return true;
         }

@@ -6,7 +6,6 @@ An android lib for enhancing BottomNavigationView.
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg) ![api 15+](https://img.shields.io/badge/API-11%2B-green.svg)
 
 
-
 ## About Us ##
 [![天宇工作室](https://github.com/ittianyu/MobileGuard/blob/master/read_me_images/logo-transparent.png?raw=true)](http://www.ittianyu.com)
 
@@ -71,12 +70,8 @@ An android lib for enhancing BottomNavigationView.
 
 ## Adding to project ##
 
-### Dependency ###
-`compileSdkVersion` >= 25 and add `design` :
-
-```groovy
-compile 'com.android.support:design:25.0.1'
-```
+### Sdk Version ###
+`compileSdkVersion` >= 25
 
 ### Importing to project ###
 
@@ -94,7 +89,7 @@ allprojects {
 
 Step 2. Add the dependency
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.1'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.2'
 ```
 
 #### and for Maven: ####
@@ -114,7 +109,7 @@ Step 2. Add the dependency
 <dependency>
     <groupId>com.github.ittianyu</groupId>
     <artifactId>BottomNavigationViewEx</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
 </dependency>
 ```
 
@@ -132,7 +127,7 @@ Adding a custom widget in `xml` :
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
-    app:itemBackground="@color/colorPrimary"
+    android:background="@color/colorPrimary"
     app:itemIconTint="@color/selector_item_color"
     app:itemTextColor="@color/selector_item_color"
     app:menu="@menu/menu_navigation_with_view_pager" />
@@ -176,12 +171,16 @@ I found it was inflexible when I try in demo. For example, I can't change the cu
 
 You no need to worry about stability. Because I minimise modifying by reflecting.
 
+## Thanks ##
+
+Thanks for [Adrián Mouly](https://github.com/amouly).
+
 
 ## License ##
 
 	MIT License
 	
-	Copyright (c) 2016 ittianyu
+	Copyright (c) 2017 ittianyu
 	
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -281,12 +280,8 @@ You no need to worry about stability. Because I minimise modifying by reflecting
 
 ## 加入工程 ##
 
-### 依赖 ###
-`compileSdkVersion` >= 25 且添加 `design` 依赖包:
-
-```groovy
-compile 'com.android.support:design:25.0.1'
-```
+### Sdk 版本 ###
+`compileSdkVersion` >= 25
 
 ### 导入本库 ###
 
@@ -304,7 +299,7 @@ allprojects {
 
 步骤 2. 添加依赖
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.1'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.2'
 ```
 
 #### Maven例子: ####
@@ -324,7 +319,7 @@ compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.1'
 <dependency>
     <groupId>com.github.ittianyu</groupId>
     <artifactId>BottomNavigationViewEx</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
 </dependency>
 ```
 
@@ -343,7 +338,7 @@ compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.1'
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
-    app:itemBackground="@color/colorPrimary"
+    android:background="@color/colorPrimary"
     app:itemIconTint="@color/selector_item_color"
     app:itemTextColor="@color/selector_item_color"
     app:menu="@menu/menu_navigation_with_view_pager" />
@@ -387,12 +382,15 @@ bind.bnve.setupWithViewPager(bind.vp);
 
 你完全没有必要担心库的稳定性，因为我是使用反射对父类进行最小限度的修改。
 
+## 致谢 ##
+
+感谢 [Adrián Mouly](https://github.com/amouly).
 
 ## 授权 ##
 
 	MIT License
 	
-	Copyright (c) 2016 ittianyu
+	Copyright (c) 2017 ittianyu
 	
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal

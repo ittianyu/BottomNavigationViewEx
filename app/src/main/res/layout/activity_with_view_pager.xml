@@ -12,11 +12,10 @@
 
         <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
             android:id="@+id/bnve"
-            style="@style/bnve"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="0dp"
+            android:background="@color/colorPrimary"
             app:itemIconTint="@color/selector_item_color"
             app:itemTextColor="@color/selector_item_color"
             app:menu="@menu/menu_navigation_with_view_pager" />
