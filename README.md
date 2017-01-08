@@ -284,7 +284,7 @@ You no need to worry about stability. Because I minimise modifying by reflecting
 ### 依赖 ###
 `compileSdkVersion` >= 25 且添加 `design` 依赖包:
 
-```
+```groovy
 compile 'com.android.support:design:25.0.1'
 ```
 
@@ -293,7 +293,7 @@ compile 'com.android.support:design:25.0.1'
 #### Gradle例子: ####
 
 步骤 1. 在工程根目录的 `build.gradle` 最后添加如下代码:
-```
+```groovy
 allprojects {
 	repositories {
 		...
@@ -303,14 +303,14 @@ allprojects {
 ```
 
 步骤 2. 添加依赖
-```
+```groovy
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.1'
 ```
 
 #### Maven例子: ####
 
 步骤 1. 在工程根目录的 `build.gradle` 最后添加如下代码:
-```
+```xml
 <repositories>
 	<repository>
 	    <id>jitpack.io</id>
@@ -320,7 +320,7 @@ compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.1'
 ```
 
 步骤 2. 添加依赖
-```
+```xml
 <dependency>
     <groupId>com.github.ittianyu</groupId>
     <artifactId>BottomNavigationViewEx</artifactId>
