@@ -168,6 +168,18 @@
                 app:itemTextColor="@color/selector_item_color"
                 app:menu="@menu/menu_navigation" />
 
+            <TextView
+                style="@style/text_black"
+                android:text="@string/no_animation_shifting_mode_item_shifting_mode_icon_with_padding" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_no_animation_shifting_mode_item_shifting_mode_icon_with_padding"
+                style="@style/bnve"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                app:itemIconTint="@color/selector_item_color"
+                app:itemTextColor="@color/selector_item_color"
+                app:menu="@menu/menu_navigation" />
 
         </LinearLayout>
 

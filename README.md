@@ -162,6 +162,15 @@ You can see the demo.
 Other usage is the same as official `BottomNavigationView`.
 You can [click here](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html) for detail.
 
+## ProGuard ##
+
+If you are using ProGuard you might need to add the following option:
+```
+-keep public class android.support.design.widget.BottomNavigationView { *; }
+-keep public class android.support.design.internal.BottomNavigationMenuView { *; }
+-keep public class android.support.design.internal.BottomNavigationPresenter { *; }
+-keep public class android.support.design.internal.BottomNavigationItemView { *; }
+```
 
 ## References ##
 
@@ -372,6 +381,17 @@ bind.bnve.setupWithViewPager(bind.vp);
 #### 其他 BottomNavigationView 的用法 ####
 其他用法和官方 `BottomNavigationView` 一样。
 详情[点击这里](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html)
+
+
+## 混淆 ##
+
+如果你启用了 ProGuard，那你应该加上以下混淆代码:
+```
+-keep public class android.support.design.widget.BottomNavigationView { *; }
+-keep public class android.support.design.internal.BottomNavigationMenuView { *; }
+-keep public class android.support.design.internal.BottomNavigationPresenter { *; }
+-keep public class android.support.design.internal.BottomNavigationItemView { *; }
+```
 
 
 ## 来源 ##

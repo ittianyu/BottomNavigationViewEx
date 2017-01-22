@@ -61,5 +61,9 @@ public class StyleActivity extends AppCompatActivity {
         binding.bnveNoAnimationShiftingModeItemShiftingModeIcon.enableItemShiftingMode(false);
         binding.bnveNoAnimationShiftingModeItemShiftingModeIcon.setIconVisibility(false);
 
+        binding.bnveNoAnimationShiftingModeItemShiftingModeIconWithPadding.enableAnimation(false);
+        binding.bnveNoAnimationShiftingModeItemShiftingModeIconWithPadding.enableShiftingMode(false);
+        binding.bnveNoAnimationShiftingModeItemShiftingModeIconWithPadding.enableItemShiftingMode(false);
+        binding.bnveNoAnimationShiftingModeItemShiftingModeIconWithPadding.setIconVisibility(false);
     }
 }
