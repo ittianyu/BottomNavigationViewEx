@@ -184,6 +184,11 @@ You no need to worry about stability. Because I minimise modifying by reflecting
 
 Thanks for [Adrián Mouly](https://github.com/amouly).
 
+## 求职 ##
+
+请原谅我打一个求职广告。
+
+年后打算去深圳或广州找份安卓开发的工作或实习，如果哪位大佬看得上鄙人的 [简历](http://ittianyu.deercv.com/)，请邮箱 86839868@qq.com 或QQ联系（最好支持远程面试）。
 
 ## License ##
 
@@ -403,6 +408,12 @@ bind.bnve.setupWithViewPager(bind.vp);
 ## 致谢 ##
 
 感谢 [Adrián Mouly](https://github.com/amouly).
+
+## 求职 ##
+
+请原谅我打一个求职广告。
+
+年后打算去深圳或广州找份安卓开发的工作或实习，如果哪位大佬看得上鄙人的 [简历](http://ittianyu.deercv.com/)，请邮箱 86839868@qq.com 或QQ联系（最好支持远程面试）。
 
 ## 授权 ##
 
