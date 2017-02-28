@@ -2,68 +2,121 @@ package com.ittianyu.bottomnavigationviewexsample.features.style;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.ittianyu.bottomnavigationviewexsample.R;
 import com.ittianyu.bottomnavigationviewexsample.databinding.ActivityStyleBinding;
 
 public class StyleActivity extends AppCompatActivity {
-    private ActivityStyleBinding binding;
+    private ActivityStyleBinding bind;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_style);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_style);
+        bind = DataBindingUtil.setContentView(this, R.layout.activity_style);
 
         init();
     }
 
     private void init() {
-        binding.bnveNoAnimation.enableAnimation(false);
+        bind.bnveNoAnimation.enableAnimation(false);
 
-        binding.bnveNoShiftingMode.enableShiftingMode(false);
+        bind.bnveNoShiftingMode.enableShiftingMode(false);
 
-        binding.bnveNoItemShiftingMode.enableItemShiftingMode(false);
+        bind.bnveNoItemShiftingMode.enableItemShiftingMode(false);
 
-        binding.bnveNoText.setTextVisibility(false);
+        bind.bnveNoText.setTextVisibility(false);
 
-        binding.bnveNoIcon.setIconVisibility(false);
+        bind.bnveNoIcon.setIconVisibility(false);
 
-        binding.bnveNoAnimationShiftingMode.enableAnimation(false);
-        binding.bnveNoAnimationShiftingMode.enableShiftingMode(false);
+        bind.bnveNoAnimationShiftingMode.enableAnimation(false);
+        bind.bnveNoAnimationShiftingMode.enableShiftingMode(false);
 
-        binding.bnveNoAnimationItemShiftingMode.enableAnimation(false);
-        binding.bnveNoAnimationItemShiftingMode.enableItemShiftingMode(false);
+        bind.bnveNoAnimationItemShiftingMode.enableAnimation(false);
+        bind.bnveNoAnimationItemShiftingMode.enableItemShiftingMode(false);
 
-        binding.bnveNoAnimationShiftingModeItemShiftingMode.enableAnimation(false);
-        binding.bnveNoAnimationShiftingModeItemShiftingMode.enableShiftingMode(false);
-        binding.bnveNoAnimationShiftingModeItemShiftingMode.enableItemShiftingMode(false);
+        bind.bnveNoAnimationShiftingModeItemShiftingMode.enableAnimation(false);
+        bind.bnveNoAnimationShiftingModeItemShiftingMode.enableShiftingMode(false);
+        bind.bnveNoAnimationShiftingModeItemShiftingMode.enableItemShiftingMode(false);
 
-        binding.bnveNoShiftingModeItemShiftingModeText.enableShiftingMode(false);
-        binding.bnveNoShiftingModeItemShiftingModeText.enableItemShiftingMode(false);
-        binding.bnveNoShiftingModeItemShiftingModeText.setTextVisibility(false);
+        bind.bnveNoShiftingModeItemShiftingModeText.enableShiftingMode(false);
+        bind.bnveNoShiftingModeItemShiftingModeText.enableItemShiftingMode(false);
+        bind.bnveNoShiftingModeItemShiftingModeText.setTextVisibility(false);
 
-        binding.bnveNoAnimationShiftingModeItemShiftingModeText.enableAnimation(false);
-        binding.bnveNoAnimationShiftingModeItemShiftingModeText.enableShiftingMode(false);
-        binding.bnveNoAnimationShiftingModeItemShiftingModeText.enableItemShiftingMode(false);
-        binding.bnveNoAnimationShiftingModeItemShiftingModeText.setTextVisibility(false);
+        bind.bnveNoAnimationShiftingModeItemShiftingModeText.enableAnimation(false);
+        bind.bnveNoAnimationShiftingModeItemShiftingModeText.enableShiftingMode(false);
+        bind.bnveNoAnimationShiftingModeItemShiftingModeText.enableItemShiftingMode(false);
+        bind.bnveNoAnimationShiftingModeItemShiftingModeText.setTextVisibility(false);
 
-        binding.bnveNoShiftingModeItemShiftingModeAndIcon.enableShiftingMode(false);
-        binding.bnveNoShiftingModeItemShiftingModeAndIcon.enableItemShiftingMode(false);
-        binding.bnveNoShiftingModeItemShiftingModeAndIcon.setIconVisibility(false);
+        bind.bnveNoShiftingModeItemShiftingModeAndIcon.enableShiftingMode(false);
+        bind.bnveNoShiftingModeItemShiftingModeAndIcon.enableItemShiftingMode(false);
+        bind.bnveNoShiftingModeItemShiftingModeAndIcon.setIconVisibility(false);
 
-        binding.bnveNoItemShiftingModeIcon.enableItemShiftingMode(false);
-        binding.bnveNoItemShiftingModeIcon.setIconVisibility(false);
+        bind.bnveNoItemShiftingModeIcon.enableItemShiftingMode(false);
+        bind.bnveNoItemShiftingModeIcon.setIconVisibility(false);
 
-        binding.bnveNoAnimationShiftingModeItemShiftingModeIcon.enableAnimation(false);
-        binding.bnveNoAnimationShiftingModeItemShiftingModeIcon.enableShiftingMode(false);
-        binding.bnveNoAnimationShiftingModeItemShiftingModeIcon.enableItemShiftingMode(false);
-        binding.bnveNoAnimationShiftingModeItemShiftingModeIcon.setIconVisibility(false);
+        bind.bnveNoAnimationShiftingModeItemShiftingModeIcon.enableAnimation(false);
+        bind.bnveNoAnimationShiftingModeItemShiftingModeIcon.enableShiftingMode(false);
+        bind.bnveNoAnimationShiftingModeItemShiftingModeIcon.enableItemShiftingMode(false);
+        bind.bnveNoAnimationShiftingModeItemShiftingModeIcon.setIconVisibility(false);
 
-        binding.bnveNoAnimationShiftingModeItemShiftingModeIconWithPadding.enableAnimation(false);
-        binding.bnveNoAnimationShiftingModeItemShiftingModeIconWithPadding.enableShiftingMode(false);
-        binding.bnveNoAnimationShiftingModeItemShiftingModeIconWithPadding.enableItemShiftingMode(false);
-        binding.bnveNoAnimationShiftingModeItemShiftingModeIconWithPadding.setIconVisibility(false);
+        bind.bnveWithPadding.enableAnimation(false);
+        bind.bnveWithPadding.enableShiftingMode(false);
+        bind.bnveWithPadding.enableItemShiftingMode(false);
+        bind.bnveWithPadding.setIconVisibility(false);
+
+        initCenterIconOnly();
+
+        initSmallerText();
+
+        initBiggerIcon();
+    }
+
+    private void initCenterIconOnly() {
+        bind.bnveCenterIconOnly.enableAnimation(false);
+        bind.bnveCenterIconOnly.enableShiftingMode(false);
+        bind.bnveCenterIconOnly.enableItemShiftingMode(false);
+        int centerPosition = 2;
+        // attention: you must ensure the center menu item title is empty
+        // make icon bigger at centerPosition
+        bind.bnveCenterIconOnly.setIconSizeAt(centerPosition, 48, 48);
+        // you could set a listener for bnve. and return false when click the center item so that it won't be checked.
+        bind.bnveCenterIconOnly.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.menu_add) {
+                    Toast.makeText(StyleActivity.this, "add", Toast.LENGTH_SHORT).show();
+                    return false;
+                }
+                return true;
+            }
+        });
+    }
+
+    private void initSmallerText() {
+        bind.bnveSmallerText.enableAnimation(false);
+        bind.bnveSmallerText.enableShiftingMode(false);
+        bind.bnveSmallerText.enableItemShiftingMode(false);
+        // set text size
+        bind.bnveSmallerText.setTextSize(8);
+    }
+
+    private void initBiggerIcon() {
+        bind.bnveBiggerIcon.enableAnimation(false);
+        bind.bnveBiggerIcon.enableShiftingMode(false);
+        bind.bnveBiggerIcon.enableItemShiftingMode(false);
+        // hide text
+        bind.bnveBiggerIcon.setTextVisibility(false);
+        // set icon size
+        int iconSize = 36;
+        bind.bnveBiggerIcon.setIconSize(iconSize, iconSize);
+        // set item height
+        bind.bnveBiggerIcon.setItemHeight(BottomNavigationViewEx.dp2px(this, iconSize + 16));
     }
 }

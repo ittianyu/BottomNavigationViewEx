@@ -20,10 +20,20 @@ An android lib for enhancing BottomNavigationView.
 |getBottomNavigationItemViews|Get private mButtons in mMenuView
 |getCurrentItem|Get the current checked item position.
 |getIconAt|Get icon at position.
+|getItemCount|Get item count.
+|getItemHeight|Get item height.
+|getLargeLabelAt|Get large label at position. Each item has tow label, one is large, another is small.
+|getSmallLabelAt|Get small label at position. Each item has tow label, one is large, another is small.
 |getMenuItemPosition|Get menu item position in menu. Return position if success, -1 otherwise.
 |getOnNavigationItemSelectedListener|Get OnNavigationItemSelectedListener.
 |setCurrentItem|Set the current checked item.
+|setIconSize|Set all item ImageView size.
+|setIconSizeAt|Set all item ImageView size which at position.
 |setIconVisibility|Change the visibility of icon.
+|setItemHeight|Set menu item height.
+|setLargeTextSize|Set all item large TextView size. Each item has tow label, one is large, another is small. Small one will be shown when item state is normal. Large one will be shown when item checked.
+|setSmallTextSize|Set all item small TextView size. Each item has tow label, one is large, another is small. Small one will be shown when item state is normal. Large one will be shown when item checked.
+|setTextSize|Set all item large and small TextView size.
 |setTextVisibility|Change the visibility of text.
 |setupWithViewPager|This method will link the given ViewPager and this BottomNavigationViewEx together so that changes in one are automatically reflected in the other. This includes scroll state changes and clicks.
 
@@ -59,6 +69,14 @@ An android lib for enhancing BottomNavigationView.
 ![](/read_me_images/no_item_shifting_mode_icon.gif)
 
 ![](/read_me_images/no_animation_shifting_mode_item_shifting_mode_icon.gif)
+
+![](/read_me_images/with_padding.jpg)
+
+![](/read_me_images/center_icon_only.gif)
+
+![](/read_me_images/smaller_text.jpg)
+
+![](/read_me_images/bigger_icon.jpg)
 
 **With ViewPager**
 
@@ -145,6 +163,12 @@ bnve.enableShiftingMode(false);
 bnve.enableItemShiftingMode(false);
 ```
 
+#### Custom text and icon size ####
+```java
+bnve.setIconSize(widthDp, heightDp);
+bnve.setTextSize(sp);
+```
+
 #### Binding with ViewPager ####
 ```java
 // set adapter
@@ -184,11 +208,6 @@ You no need to worry about stability. Because I minimise modifying by reflecting
 
 Thanks for [Adrián Mouly](https://github.com/amouly).
 
-## 求职 ##
-
-请原谅我打一个求职广告。
-
-年后打算去深圳或广州找份安卓开发的工作或实习，如果哪位大佬看得上鄙人的 [简历](http://ittianyu.deercv.com/)，请邮箱 86839868@qq.com 或QQ联系（最好支持远程面试）。
 
 ## License ##
 
@@ -241,11 +260,21 @@ Thanks for [Adrián Mouly](https://github.com/amouly).
 |getBottomNavigationItemView|获取位于 position 的私有成员变量 mButton。
 |getBottomNavigationItemViews|获取私有成员变量 mButtons。
 |getCurrentItem|获取当前选中项的索引。
-|getIconAt|获取位于 position 的图片.
+|getIconAt|获取位于 position 的图片。
+|getItemCount|获取子项个数。
+|getItemHeight|获取菜单高度。
+|getLargeLabelAt|获取位于 position 的大标签. 每个子项包含两个标签，一个大的，一个小的。
+|getSmallLabelAt|获取位于 position 的小标签. 每个子项包含两个标签，一个大的，一个小的。
 |getMenuItemPosition|获取子菜单的索引。如果找不到，返回 -1。
 |getOnNavigationItemSelectedListener|获取 OnNavigationItemSelectedListener。
 |setCurrentItem|设置当前选中项。
+|setIconSize|设置所有的子项图标大小。
+|setIconSizeAt|设置位于 position 的图标的大小。
 |setIconVisibility|设置图片可见性。
+|setItemHeight|设置子项高度。
+|setLargeTextSize|设置所有子项的大标签文本大小。每个子项有两个标签，一个大的，一个小的。当子项未选中时，显示小标签；选中时，显示大标签。
+|setSmallTextSize|设置所有子项的小标签文本大小。每个子项有两个标签，一个大的，一个小的。当子项未选中时，显示小标签；选中时，显示大标签。
+|setTextSize|设置所有子项的大和小标签文本大小。
 |setTextVisibility|设置文本可见性。
 |setupWithViewPager|和 ViewPager 绑定，当 任何一个选中项改变时，都会自动改变另一项。
 
@@ -281,6 +310,14 @@ Thanks for [Adrián Mouly](https://github.com/amouly).
 ![](/read_me_images/no_item_shifting_mode_icon.gif)
 
 ![](/read_me_images/no_animation_shifting_mode_item_shifting_mode_icon.gif)
+
+![](/read_me_images/with_padding.jpg)
+
+![](/read_me_images/center_icon_only.gif)
+
+![](/read_me_images/smaller_text.jpg)
+
+![](/read_me_images/bigger_icon.jpg)
 
 **和 ViewPager 一起使用**
 
@@ -368,6 +405,12 @@ bnve.enableShiftingMode(false);
 bnve.enableItemShiftingMode(false);
 ```
 
+#### 自定义图标和文本大小 ####
+```java
+bnve.setIconSize(widthDp, heightDp);
+bnve.setTextSize(sp);
+```
+
 #### 和 ViewPager 绑定####
 ```java
 // set adapter
@@ -408,12 +451,6 @@ bind.bnve.setupWithViewPager(bind.vp);
 ## 致谢 ##
 
 感谢 [Adrián Mouly](https://github.com/amouly).
-
-## 求职 ##
-
-请原谅我打一个求职广告。
-
-年后打算去深圳或广州找份安卓开发的工作或实习，如果哪位大佬看得上鄙人的 [简历](http://ittianyu.deercv.com/)，请邮箱 86839868@qq.com 或QQ联系（最好支持远程面试）。
 
 ## 授权 ##
 

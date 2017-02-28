@@ -23,5 +23,8 @@
     <string name="normal" translatable="false">normal</string>
     <string name="setup_with_view_pager" translatable="false">setup with view pager</string>
     <string name="badge_view">badge view</string>
-    <string name="no_animation_shifting_mode_item_shifting_mode_icon_with_padding" translatable="false">no animation/ shifting mode/ item shifting mode/ icon with padding</string>
+    <string name="with_padding" translatable="false">with padding</string>
+    <string name="center_icon_only" translatable="false">center icon only</string>
+    <string name="smaller_text" translatable="false">smaller text (custom font size)</string>
+    <string name="bigger_icon" translatable="false">bigger icon (custom icon size)</string>
 </resources>
