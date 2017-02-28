@@ -107,28 +107,7 @@ allprojects {
 
 Step 2. Add the dependency
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.2'
-```
-
-#### and for Maven: ####
-
-Step 1. Add it in your root build.gradle at the end of repositories:
-```xml
-<repositories>
-	<repository>
-	    <id>jitpack.io</id>
-	    <url>https://jitpack.io</url>
-	</repository>
-</repositories>
-```
-
-Step 2. Add the dependency
-```xml
-<dependency>
-    <groupId>com.github.ittianyu</groupId>
-    <artifactId>BottomNavigationViewEx</artifactId>
-    <version>1.1.2</version>
-</dependency>
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.3'
 ```
 
 #### Manual: ####
@@ -348,28 +327,7 @@ allprojects {
 
 步骤 2. 添加依赖
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.2'
-```
-
-#### Maven例子: ####
-
-步骤 1. 在工程根目录的 `build.gradle` 最后添加如下代码:
-```xml
-<repositories>
-	<repository>
-	    <id>jitpack.io</id>
-	    <url>https://jitpack.io</url>
-	</repository>
-</repositories>
-```
-
-步骤 2. 添加依赖
-```xml
-<dependency>
-    <groupId>com.github.ittianyu</groupId>
-    <artifactId>BottomNavigationViewEx</artifactId>
-    <version>1.1.2</version>
-</dependency>
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.3'
 ```
 
 #### 手动导入: ####
