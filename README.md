@@ -107,7 +107,7 @@ allprojects {
 
 Step 2. Add the dependency
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.3'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.4'
 ```
 
 #### Manual: ####
@@ -327,7 +327,7 @@ allprojects {
 
 步骤 2. 添加依赖
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.3'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.4'
 ```
 
 #### 手动导入: ####
