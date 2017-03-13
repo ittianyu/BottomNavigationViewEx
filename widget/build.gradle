@@ -4,14 +4,14 @@ apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.ittianyu'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         minSdkVersion 11
-        targetSdkVersion 25
-        versionCode 7
-        versionName "1.1.3"
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 8
+        versionName "1.1.4"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -29,7 +29,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:design:25.1.0'
+    compile "com.android.support:design:$rootProject.supportLibraryVersion"
     testCompile 'junit:junit:4.12'
 }
 
