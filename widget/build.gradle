@@ -8,10 +8,10 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 11
+        minSdkVersion 9
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 8
-        versionName "1.1.4"
+        versionCode 9
+        versionName "1.1.5"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
