@@ -2,6 +2,7 @@ package com.ittianyu.bottomnavigationviewex;
 
 import android.content.Context;
 import android.graphics.Paint;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.internal.BottomNavigationItemView;
@@ -503,6 +504,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
     /**
      * get small label at position
      * Each item has tow label, one is large, another is small.
+     *
      * @param position
      * @return
      */
@@ -520,6 +522,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
     /**
      * get large label at position
      * Each item has tow label, one is large, another is small.
+     *
      * @param position
      * @return
      */
@@ -621,6 +624,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
 
     /**
      * set menu item height
+     *
      * @param height in px
      */
     public void setItemHeight(int height) {
@@ -634,6 +638,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
 
     /**
      * get menu item height
+     *
      * @return in px
      */
     public int getItemHeight() {
@@ -653,6 +658,33 @@ public class BottomNavigationViewEx extends BottomNavigationView {
     public static int dp2px(Context context, float dpValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5f);
+    }
+
+    /**
+     * set Typeface for all item TextView
+     *
+     * @attr ref android.R.styleable#TextView_typeface
+     * @attr ref android.R.styleable#TextView_textStyle
+     */
+    public void setTypeface(Typeface typeface, int style) {
+        int count = getItemCount();
+        for (int i = 0; i < count; i++) {
+            getLargeLabelAt(i).setTypeface(typeface, style);
+        }
+        mMenuView.updateMenuView();
+    }
+
+    /**
+     * set Typeface for all item TextView
+     *
+     * @attr ref android.R.styleable#TextView_typeface
+     */
+    public void setTypeface(Typeface typeface) {
+        int count = getItemCount();
+        for (int i = 0; i < count; i++) {
+            getLargeLabelAt(i).setTypeface(typeface);
+        }
+        mMenuView.updateMenuView();
     }
 
     /**

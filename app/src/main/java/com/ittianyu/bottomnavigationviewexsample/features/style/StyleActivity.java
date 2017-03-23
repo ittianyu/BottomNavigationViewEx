@@ -1,6 +1,7 @@
 package com.ittianyu.bottomnavigationviewexsample.features.style;
 
 import android.databinding.DataBindingUtil;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -76,6 +77,8 @@ public class StyleActivity extends AppCompatActivity {
         initSmallerText();
 
         initBiggerIcon();
+
+        initCustomTypeface();
     }
 
     private void initCenterIconOnly() {
@@ -119,4 +122,16 @@ public class StyleActivity extends AppCompatActivity {
         // set item height
         bind.bnveBiggerIcon.setItemHeight(BottomNavigationViewEx.dp2px(this, iconSize + 16));
     }
+
+    private void initCustomTypeface() {
+        bind.bnveCustomTypeface.enableAnimation(false);
+        bind.bnveCustomTypeface.enableShiftingMode(false);
+        bind.bnveCustomTypeface.enableItemShiftingMode(false);
+        // set typeface : bold
+        bind.bnveCustomTypeface.setTypeface(Typeface.DEFAULT_BOLD);
+        // you also could set typeface from file.
+//        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom.ttf");
+//        bind.bnveCustomTypeface.setTypeface(typeface);
+    }
+
 }

@@ -35,6 +35,7 @@ An android lib for enhancing BottomNavigationView.
 |setSmallTextSize|Set all item small TextView size. Each item has tow label, one is large, another is small. Small one will be shown when item state is normal. Large one will be shown when item checked.
 |setTextSize|Set all item large and small TextView size.
 |setTextVisibility|Change the visibility of text.
+|setTypeface|set Typeface for all item TextView.
 |setupWithViewPager|This method will link the given ViewPager and this BottomNavigationViewEx together so that changes in one are automatically reflected in the other. This includes scroll state changes and clicks.
 
 
@@ -78,6 +79,8 @@ An android lib for enhancing BottomNavigationView.
 
 ![](/read_me_images/bigger_icon.jpg)
 
+![](/read_me_images/custom_typeface.jpg)
+
 **With ViewPager**
 
 ![](/read_me_images/with_view_pager.gif)
@@ -107,7 +110,7 @@ allprojects {
 
 Step 2. Add the dependency
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.5'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.6'
 ```
 
 #### Manual: ####
@@ -255,6 +258,7 @@ Thanks for [Adrián Mouly](https://github.com/amouly).
 |setSmallTextSize|设置所有子项的小标签文本大小。每个子项有两个标签，一个大的，一个小的。当子项未选中时，显示小标签；选中时，显示大标签。
 |setTextSize|设置所有子项的大和小标签文本大小。
 |setTextVisibility|设置文本可见性。
+|setTypeface|设置所有子项的 TextView 字体
 |setupWithViewPager|和 ViewPager 绑定，当 任何一个选中项改变时，都会自动改变另一项。
 
 
@@ -298,6 +302,8 @@ Thanks for [Adrián Mouly](https://github.com/amouly).
 
 ![](/read_me_images/bigger_icon.jpg)
 
+![](/read_me_images/custom_typeface.jpg)
+
 **和 ViewPager 一起使用**
 
 ![](/read_me_images/with_view_pager.gif)
@@ -327,7 +333,7 @@ allprojects {
 
 步骤 2. 添加依赖
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.5'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.6'
 ```
 
 #### 手动导入: ####

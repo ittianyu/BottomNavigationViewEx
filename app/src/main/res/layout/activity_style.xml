@@ -214,6 +214,17 @@
                 app:itemTextColor="@color/selector_item_color"
                 app:menu="@menu/menu_navigation" />
 
+            <TextView
+                style="@style/text_black"
+                android:text="@string/custom_typeface" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_custom_typeface"
+                style="@style/bnve"
+                app:itemIconTint="@color/selector_item_color"
+                app:itemTextColor="@color/selector_item_color"
+                app:menu="@menu/menu_navigation" />
+
         </LinearLayout>
 
     </ScrollView>

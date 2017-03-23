@@ -27,4 +27,5 @@
     <string name="center_icon_only" translatable="false">center icon only</string>
     <string name="smaller_text" translatable="false">smaller text (custom font size)</string>
     <string name="bigger_icon" translatable="false">bigger icon (custom icon size)</string>
+    <string name="custom_typeface" translatable="false">custom typeface</string>
 </resources>
