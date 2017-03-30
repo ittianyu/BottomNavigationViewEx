@@ -81,6 +81,8 @@ An android lib for enhancing BottomNavigationView.
 
 ![](/read_me_images/custom_typeface.jpg)
 
+![](/read_me_images/icon_selector_1.jpg) ![](/read_me_images/icon_selector_2.jpg)
+
 **With ViewPager**
 
 ![](/read_me_images/with_view_pager.gif)
@@ -110,7 +112,7 @@ allprojects {
 
 Step 2. Add the dependency
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.6'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.7'
 ```
 
 #### Manual: ####
@@ -304,6 +306,8 @@ Thanks for [Adrián Mouly](https://github.com/amouly).
 
 ![](/read_me_images/custom_typeface.jpg)
 
+![](/read_me_images/icon_selector_1.jpg) ![](/read_me_images/icon_selector_2.jpg)
+
 **和 ViewPager 一起使用**
 
 ![](/read_me_images/with_view_pager.gif)
@@ -333,7 +337,7 @@ allprojects {
 
 步骤 2. 添加依赖
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.6'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.7'
 ```
 
 #### 手动导入: ####

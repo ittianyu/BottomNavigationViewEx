@@ -79,9 +79,9 @@ public class WithViewPagerActivity extends AppCompatActivity {
         fragments.add(friendsFragment);
 
         // add to items for change ViewPager item
-        items.put(R.id.menu_music, 0);
-        items.put(R.id.menu_backup, 1);
-        items.put(R.id.menu_friends, 2);
+        items.put(R.id.i_music, 0);
+        items.put(R.id.i_backup, 1);
+        items.put(R.id.i_friends, 2);
 
         // set adapter
         adapter = new VpAdapter(getSupportFragmentManager(), fragments);

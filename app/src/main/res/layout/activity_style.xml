@@ -20,9 +20,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_normal"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -31,9 +31,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_animation"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -42,9 +42,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_shifting_mode"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -53,9 +53,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_item_shifting_mode"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -64,9 +64,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_text"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -75,9 +75,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_icon"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -86,9 +86,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_animation_shifting_mode"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -97,9 +97,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_animation_item_shifting_mode"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -108,9 +108,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_animation_shifting_mode_item_shifting_mode"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -119,9 +119,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_shifting_mode_item_shifting_mode_text"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -130,9 +130,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_animation_shifting_mode_item_shifting_mode_text"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -141,9 +141,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_shifting_mode_item_shifting_mode_and_icon"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -152,9 +152,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_item_shifting_mode_icon"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -163,9 +163,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_no_animation_shifting_mode_item_shifting_mode_icon"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -174,11 +174,11 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_with_padding"
-                style="@style/bnve"
+                style="@style/bnve_primary_bg"
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -187,9 +187,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_center_icon_only"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation_center_icon_only" />
 
             <TextView
@@ -198,9 +198,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_smaller_text"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -209,9 +209,9 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_bigger_icon"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
 
             <TextView
@@ -220,10 +220,21 @@
 
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_custom_typeface"
-                style="@style/bnve"
-                app:itemIconTint="@color/selector_item_color"
-                app:itemTextColor="@color/selector_item_color"
+                style="@style/bnve_primary_bg"
+                app:itemIconTint="@color/selector_item_gray_color"
+                app:itemTextColor="@color/selector_item_gray_color"
                 app:menu="@menu/menu_navigation" />
+
+            <TextView
+                style="@style/text_black"
+                android:text="@string/icon_selector" />
+
+            <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bnve_icon_selector"
+                style="@style/bnve_white_bg"
+                app:itemIconTint="@color/selector_item_primary_color"
+                app:itemTextColor="@color/selector_item_primary_color"
+                app:menu="@menu/menu_navigation_selector" />
 
         </LinearLayout>
 

@@ -9,4 +9,7 @@
     <string name="different_style">不同的样式</string>
     <string name="with_view_pager">配合ViewPager</string>
     <string name="badge_view">带数字小红点</string>
+    <string name="face">表情</string>
+    <string name="lamp">灯</string>
+    <string name="weather">天气</string>
 </resources>

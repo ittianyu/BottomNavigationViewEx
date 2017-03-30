@@ -670,6 +670,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
         int count = getItemCount();
         for (int i = 0; i < count; i++) {
             getLargeLabelAt(i).setTypeface(typeface, style);
+            getSmallLabelAt(i).setTypeface(typeface, style);
         }
         mMenuView.updateMenuView();
     }
@@ -683,6 +684,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
         int count = getItemCount();
         for (int i = 0; i < count; i++) {
             getLargeLabelAt(i).setTypeface(typeface);
+            getSmallLabelAt(i).setTypeface(typeface);
         }
         mMenuView.updateMenuView();
     }

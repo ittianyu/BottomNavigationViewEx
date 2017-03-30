@@ -28,4 +28,8 @@
     <string name="smaller_text" translatable="false">smaller text (custom font size)</string>
     <string name="bigger_icon" translatable="false">bigger icon (custom icon size)</string>
     <string name="custom_typeface" translatable="false">custom typeface</string>
+    <string name="icon_selector" translatable="false">icon selector</string>
+    <string name="lamp">Lamp</string>
+    <string name="weather">Weather</string>
+    <string name="face">Face</string>
 </resources>

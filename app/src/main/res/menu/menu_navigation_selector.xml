@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/i_face"
+        android:checked="true"
+        android:icon="@drawable/selector_face"
+        android:title="@string/face" />
+
+    <item
+        android:id="@+id/i_weather"
+        android:icon="@drawable/selector_weather"
+        android:title="@string/weather" />
+
+    <item
+        android:id="@+id/i_lamp"
+        android:icon="@drawable/selector_lamp"
+        android:title="@string/lamp" />
+
+</menu>

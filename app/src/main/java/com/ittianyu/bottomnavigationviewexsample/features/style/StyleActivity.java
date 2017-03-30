@@ -79,6 +79,8 @@ public class StyleActivity extends AppCompatActivity {
         initBiggerIcon();
 
         initCustomTypeface();
+
+        bind.bnveIconSelector.enableAnimation(false);
     }
 
     private void initCenterIconOnly() {
