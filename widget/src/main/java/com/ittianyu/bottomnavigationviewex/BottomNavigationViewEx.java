@@ -431,7 +431,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
      */
     public OnNavigationItemSelectedListener getOnNavigationItemSelectedListener() {
         // private OnNavigationItemSelectedListener mListener;
-        OnNavigationItemSelectedListener mListener = getField(getClass().getSuperclass(), this, "mListener");
+        OnNavigationItemSelectedListener mListener = getField(BottomNavigationView.class, this, "mSelectedListener");
         return mListener;
     }
 
@@ -453,7 +453,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
      */
     private BottomNavigationMenuView getBottomNavigationMenuView() {
         if (null == mMenuView)
-            mMenuView = getField(getClass().getSuperclass(), this, "mMenuView");
+            mMenuView = getField(BottomNavigationView.class, this, "mMenuView");
         return mMenuView;
     }
 
@@ -872,6 +872,34 @@ public class BottomNavigationViewEx extends BottomNavigationView {
             return true;
         }
 
+    }
+    
+    public void enableShiftingMode(int position, boolean enable) {
+        getBottomNavigationItemView(position).setShiftingMode(enable);
+    }
+
+    public void setItemBackground(int position, int background) {
+        getBottomNavigationItemView(position).setItemBackground(background);
+    }
+
+    public void setIconTintList(int position, ColorStateList tint) {
+        getBottomNavigationItemView(position).setIconTintList(tint);
+    }
+
+    /**
+     * <p>
+     * 在 {@code android.support.design.internal.BottomNavigationItemView#setChecked()} 中,又会自动恢复TOP;
+     * 需要配合{@link #enableShiftingMode(int, boolean)}使用;
+     * </p>
+     *
+     * @param position
+     *         item的位置
+     */
+    public void setIconCenter(int position) {
+        enableShiftingMode(position, true);
+        ImageView addImg = getIconAt(position);
+        FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) addImg.getLayoutParams();
+        lp.gravity = Gravity.CENTER;
     }
 
 }
