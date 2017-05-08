@@ -1,6 +1,7 @@
 package com.ittianyu.bottomnavigationviewex;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
@@ -12,10 +13,12 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.SparseIntArray;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -888,12 +891,11 @@ public class BottomNavigationViewEx extends BottomNavigationView {
 
     /**
      * <p>
-     * 在 {@code android.support.design.internal.BottomNavigationItemView#setChecked()} 中,又会自动恢复TOP;
-     * 需要配合{@link #enableShiftingMode(int, boolean)}使用;
+     * It will go back when it was checked {@code android.support.design.internal.BottomNavigationItemView#setChecked()}
+     * So you need call {@link #enableShiftingMode(int, boolean)} to make it center again when item selected
      * </p>
      *
      * @param position
-     *         item的位置
      */
     public void setIconCenter(int position) {
         enableShiftingMode(position, true);

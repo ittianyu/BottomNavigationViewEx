@@ -91,6 +91,10 @@ public class StyleActivity extends AppCompatActivity {
         // attention: you must ensure the center menu item title is empty
         // make icon bigger at centerPosition
         bind.bnveCenterIconOnly.setIconSizeAt(centerPosition, 48, 48);
+        bind.bnveCenterIconOnly.setItemBackground(centerPosition, R.color.colorGreen);
+        bind.bnveCenterIconOnly.setIconTintList(centerPosition,
+                getResources().getColorStateList(R.color.selector_item_gray_color));
+        bind.bnveCenterIconOnly.setIconCenter(centerPosition);
         // you could set a listener for bnve. and return false when click the center item so that it won't be checked.
         bind.bnveCenterIconOnly.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

@@ -13,8 +13,6 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-//        initLogger();
-
         initLeakCanary();
     }
 
@@ -30,13 +28,4 @@ public class BaseApplication extends Application {
         LeakCanary.install(this);
     }
 
-    /**
-     * init logger
-     */
-//    private void initLogger() {
-//        if ((0 != (getApplicationInfo().flags &= ApplicationInfo.FLAG_DEBUGGABLE)))
-//            Logger.init(); // for debug, print all log
-//        else
-//            Logger.init().logLevel(LogLevel.NONE); // for release, remove all log
-//    }
 }
