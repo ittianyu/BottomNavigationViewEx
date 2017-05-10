@@ -29,7 +29,9 @@ An android lib for enhancing BottomNavigationView.
 |setCurrentItem|Set the current checked item.
 |setIconSize|Set all item ImageView size.
 |setIconSizeAt|Set all item ImageView size which at position.
+|setIconTintList| Set the icon tint list.
 |setIconVisibility|Change the visibility of icon.
+|setItemBackground| Set background of item.
 |setItemHeight|Set menu item height.
 |setLargeTextSize|Set all item large TextView size. Each item has tow label, one is large, another is small. Small one will be shown when item state is normal. Large one will be shown when item checked.
 |setSmallTextSize|Set all item small TextView size. Each item has tow label, one is large, another is small. Small one will be shown when item state is normal. Large one will be shown when item checked.
@@ -73,7 +75,7 @@ An android lib for enhancing BottomNavigationView.
 
 ![](/read_me_images/with_padding.jpg)
 
-![](/read_me_images/center_icon_only.gif)
+![](/read_me_images/center_icon_only.jpg)
 
 ![](/read_me_images/smaller_text.jpg)
 
@@ -112,7 +114,7 @@ allprojects {
 
 Step 2. Add the dependency
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.7'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.8'
 ```
 
 #### Manual: ####
@@ -190,7 +192,7 @@ You no need to worry about stability. Because I minimise modifying by reflecting
 
 ## Thanks ##
 
-Thanks for [Adrián Mouly](https://github.com/amouly).
+Thanks for [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://github.com/liaolintao).
 
 
 ## License ##
@@ -254,7 +256,9 @@ Thanks for [Adrián Mouly](https://github.com/amouly).
 |setCurrentItem|设置当前选中项。
 |setIconSize|设置所有的子项图标大小。
 |setIconSizeAt|设置位于 position 的图标的大小。
+|setIconTintList| 设置图片的渲染颜色列表(Selector)
 |setIconVisibility|设置图片可见性。
+|setItemBackground| 设置子项的背景。
 |setItemHeight|设置子项高度。
 |setLargeTextSize|设置所有子项的大标签文本大小。每个子项有两个标签，一个大的，一个小的。当子项未选中时，显示小标签；选中时，显示大标签。
 |setSmallTextSize|设置所有子项的小标签文本大小。每个子项有两个标签，一个大的，一个小的。当子项未选中时，显示小标签；选中时，显示大标签。
@@ -298,7 +302,7 @@ Thanks for [Adrián Mouly](https://github.com/amouly).
 
 ![](/read_me_images/with_padding.jpg)
 
-![](/read_me_images/center_icon_only.gif)
+![](/read_me_images/center_icon_only.jpg)
 
 ![](/read_me_images/smaller_text.jpg)
 
@@ -337,7 +341,7 @@ allprojects {
 
 步骤 2. 添加依赖
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.7'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.8'
 ```
 
 #### 手动导入: ####
@@ -418,7 +422,7 @@ bind.bnve.setupWithViewPager(bind.vp);
 
 ## 致谢 ##
 
-感谢 [Adrián Mouly](https://github.com/amouly).
+感谢 [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://github.com/liaolintao).
 
 ## 授权 ##
 

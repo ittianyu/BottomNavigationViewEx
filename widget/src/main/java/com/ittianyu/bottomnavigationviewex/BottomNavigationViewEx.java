@@ -899,8 +899,8 @@ public class BottomNavigationViewEx extends BottomNavigationView {
      */
     public void setIconCenter(int position) {
         enableShiftingMode(position, true);
-        ImageView addImg = getIconAt(position);
-        FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) addImg.getLayoutParams();
+        ImageView iv = getIconAt(position);
+        FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) iv.getLayoutParams();
         lp.gravity = Gravity.CENTER;
     }
 
