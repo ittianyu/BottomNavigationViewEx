@@ -27,8 +27,10 @@ An android lib for enhancing BottomNavigationView.
 |getMenuItemPosition|Get menu item position in menu. Return position if success, -1 otherwise.
 |getOnNavigationItemSelectedListener|Get OnNavigationItemSelectedListener.
 |setCurrentItem|Set the current checked item.
+|setIconMarginTop|set margin top for icon.
 |setIconSize|Set all item ImageView size.
 |setIconSizeAt|Set all item ImageView size which at position.
+|setIconsMarginTop|set margin top for all icons.
 |setIconTintList| Set the icon tint list.
 |setIconVisibility|Change the visibility of icon.
 |setItemBackground| Set background of item.
@@ -73,6 +75,7 @@ An android lib for enhancing BottomNavigationView.
 
 ![](/read_me_images/no_animation_shifting_mode_item_shifting_mode_icon.gif)
 
+**Attention: Something wrong on Android 4.x**
 ![](/read_me_images/with_padding.jpg)
 
 ![](/read_me_images/center_icon_only.jpg)
@@ -84,6 +87,9 @@ An android lib for enhancing BottomNavigationView.
 ![](/read_me_images/custom_typeface.jpg)
 
 ![](/read_me_images/icon_selector_1.jpg) ![](/read_me_images/icon_selector_2.jpg)
+
+![](/read_me_images/icon_margin_top.jpg)
+
 
 **With ViewPager**
 
@@ -114,12 +120,12 @@ allprojects {
 
 Step 2. Add the dependency
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.8'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.9'
 ```
 
 #### Manual: ####
 
-Downloading [BottomNavigationViewEx.java](https://raw.githubusercontent.com/ittianyu/BottomNavigationViewEx/master/widget/src/main/java/com/ittianyu/bottomnavigationviewex/BottomNavigationViewEx.java) and copying it to you project。
+Downloading [BottomNavigationViewEx.java](https://raw.githubusercontent.com/ittianyu/BottomNavigationViewEx/master/widget/src/main/java/com/ittianyu/bottomnavigationviewex/BottomNavigationViewEx.java) and copying it to you project.
 
 
 ## Getting started ##
@@ -254,8 +260,10 @@ Thanks for [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://git
 |getMenuItemPosition|获取子菜单的索引。如果找不到，返回 -1。
 |getOnNavigationItemSelectedListener|获取 OnNavigationItemSelectedListener。
 |setCurrentItem|设置当前选中项。
+|setIconMarginTop|设置 icon 的 MarginTop，用于调节图标垂直位置。
 |setIconSize|设置所有的子项图标大小。
 |setIconSizeAt|设置位于 position 的图标的大小。
+|setIconsMarginTop|设置所有 icon 的 MarginTop，用于调节图标垂直位置。
 |setIconTintList| 设置图片的渲染颜色列表(Selector)
 |setIconVisibility|设置图片可见性。
 |setItemBackground| 设置子项的背景。
@@ -300,6 +308,7 @@ Thanks for [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://git
 
 ![](/read_me_images/no_animation_shifting_mode_item_shifting_mode_icon.gif)
 
+**注意：这个 style 在安卓 4.x 上有 bug**
 ![](/read_me_images/with_padding.jpg)
 
 ![](/read_me_images/center_icon_only.jpg)
@@ -311,6 +320,8 @@ Thanks for [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://git
 ![](/read_me_images/custom_typeface.jpg)
 
 ![](/read_me_images/icon_selector_1.jpg) ![](/read_me_images/icon_selector_2.jpg)
+
+![](/read_me_images/icon_margin_top.jpg)
 
 **和 ViewPager 一起使用**
 
@@ -341,7 +352,7 @@ allprojects {
 
 步骤 2. 添加依赖
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.8'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.9'
 ```
 
 #### 手动导入: ####

@@ -81,7 +81,10 @@ public class StyleActivity extends AppCompatActivity {
         initCustomTypeface();
 
         bind.bnveIconSelector.enableAnimation(false);
+
+        initMargin();
     }
+
 
     private void initCenterIconOnly() {
         bind.bnveCenterIconOnly.enableAnimation(false);
@@ -94,7 +97,7 @@ public class StyleActivity extends AppCompatActivity {
         bind.bnveCenterIconOnly.setItemBackground(centerPosition, R.color.colorGreen);
         bind.bnveCenterIconOnly.setIconTintList(centerPosition,
                 getResources().getColorStateList(R.color.selector_item_gray_color));
-        bind.bnveCenterIconOnly.setIconCenter(centerPosition);
+        bind.bnveCenterIconOnly.setIconMarginTop(centerPosition, BottomNavigationViewEx.dp2px(this, 4));
         // you could set a listener for bnve. and return false when click the center item so that it won't be checked.
         bind.bnveCenterIconOnly.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -138,6 +141,15 @@ public class StyleActivity extends AppCompatActivity {
         // you also could set typeface from file.
 //        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/custom.ttf");
 //        bind.bnveCustomTypeface.setTypeface(typeface);
+    }
+
+    private void initMargin() {
+        bind.bnveIconMarginTop.enableAnimation(false);
+        bind.bnveIconMarginTop.enableShiftingMode(false);
+        bind.bnveIconMarginTop.enableItemShiftingMode(false);
+        bind.bnveIconMarginTop.setTextVisibility(false);
+        bind.bnveIconMarginTop.setItemHeight(BottomNavigationViewEx.dp2px(this, 56));
+        bind.bnveIconMarginTop.setIconsMarginTop(BottomNavigationViewEx.dp2px(this, 16));
     }
 
 }

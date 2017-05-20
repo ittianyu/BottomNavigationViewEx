@@ -13,12 +13,10 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.SparseIntArray;
 import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -876,7 +874,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
         }
 
     }
-    
+
     public void enableShiftingMode(int position, boolean enable) {
         getBottomNavigationItemView(position).setShiftingMode(enable);
     }
@@ -890,18 +888,28 @@ public class BottomNavigationViewEx extends BottomNavigationView {
     }
 
     /**
-     * <p>
-     * It will go back when it was checked {@code android.support.design.internal.BottomNavigationItemView#setChecked()}
-     * So you need call {@link #enableShiftingMode(int, boolean)} to make it center again when item selected
-     * </p>
-     *
-     * @param position
+     * set margin top for all icons
+     * @param marginTop in px
      */
-    public void setIconCenter(int position) {
-        enableShiftingMode(position, true);
-        ImageView iv = getIconAt(position);
-        FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) iv.getLayoutParams();
-        lp.gravity = Gravity.CENTER;
+    public void setIconsMarginTop(int marginTop) {
+        for (int i = 0; i < getItemCount(); i++) {
+            setIconMarginTop(i, marginTop);
+        }
+    }
+
+    /**
+     * set margin top for icon
+     * @param position
+     * @param marginTop in px
+     */
+    public void setIconMarginTop(int position, int marginTop) {
+        /*
+        1. BottomNavigationItemView
+        2. private final int mDefaultMargin;
+         */
+        BottomNavigationItemView itemView = getBottomNavigationItemView(position);
+        setField(BottomNavigationItemView.class, itemView, "mDefaultMargin", marginTop);
+        mMenuView.updateMenuView();
     }
 
 }

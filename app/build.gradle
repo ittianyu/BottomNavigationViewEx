@@ -8,8 +8,8 @@ android {
         applicationId "com.ittianyu.bottomnavigationviewexsample"
         minSdkVersion 9
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 12
-        versionName "1.1.8"
+        versionCode 13
+        versionName "1.1.9"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
