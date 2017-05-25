@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.ittianyu.bottomnavigationviewexsample"
-        minSdkVersion 9
+        minSdkVersion 14
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 13
         versionName "1.1.9"
@@ -38,5 +38,5 @@ dependencies {
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
 
     // badge
-    compile 'com.allenliu.badgeview:library:1.1.1'
+    compile 'q.rorbin:badgeview:1.1.0'
 }

@@ -171,6 +171,33 @@ bind.vp.setAdapter(adapter);
 bind.bnve.setupWithViewPager(bind.vp);
 ```
 
+#### Add badge view ####
+
+1. Add badge lib
+	```
+	compile 'q.rorbin:badgeview:1.1.0'
+	```
+2. Bind bottom view
+	```
+    // add badge
+    addBadgeAt(2, 1);
+
+    private Badge addBadgeAt(int position, int number) {
+        // add badge
+        return new QBadgeView(this)
+                .setBadgeNumber(number)
+                .setGravityOffset(12, 2, true)
+                .bindTarget(bind.bnve.getBottomNavigationItemView(position))
+                .setOnDragStateChangedListener(new Badge.OnDragStateChangedListener() {
+                    @Override
+                    public void onDragStateChanged(int dragState, Badge badge, View targetView) {
+                        if (Badge.OnDragStateChangedListener.STATE_SUCCEED == dragState)
+                            Toast.makeText(BadgeViewActivity.this, R.string.tips_badge_removed, Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+	```
+
 #### Other usage in BottomNavigationViewEx ####
 You can see the demo.
 
@@ -403,6 +430,34 @@ bind.vp.setAdapter(adapter);
 // binding with ViewPager
 bind.bnve.setupWithViewPager(bind.vp);
 ```
+
+
+#### 添加带数字的小红点 ####
+
+1. Gradle 中加入 badge 库的依赖
+	```
+	compile 'q.rorbin:badgeview:1.1.0'
+	```
+2. 和底部控件绑定
+	```
+    // add badge
+    addBadgeAt(2, 1);
+
+    private Badge addBadgeAt(int position, int number) {
+        // add badge
+        return new QBadgeView(this)
+                .setBadgeNumber(number)
+                .setGravityOffset(12, 2, true)
+                .bindTarget(bind.bnve.getBottomNavigationItemView(position))
+                .setOnDragStateChangedListener(new Badge.OnDragStateChangedListener() {
+                    @Override
+                    public void onDragStateChanged(int dragState, Badge badge, View targetView) {
+                        if (Badge.OnDragStateChangedListener.STATE_SUCCEED == dragState)
+                            Toast.makeText(BadgeViewActivity.this, R.string.tips_badge_removed, Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+	```
 
 #### 其他 BottomNavigationViewEx 的用法 ####
 请参考demo。
