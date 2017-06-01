@@ -124,7 +124,7 @@ allprojects {
 
 Step 2. Add the dependency
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.9'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.0'
 ```
 
 #### Manual: ####

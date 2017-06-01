@@ -121,7 +121,7 @@ allprojects {
 
 步骤 2. 添加依赖
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.9'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.0'
 ```
 
 #### 手动导入: ####
