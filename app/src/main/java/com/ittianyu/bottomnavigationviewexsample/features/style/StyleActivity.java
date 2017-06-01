@@ -42,17 +42,14 @@ public class StyleActivity extends AppCompatActivity {
         bind.bnveNoAnimationItemShiftingMode.enableAnimation(false);
         bind.bnveNoAnimationItemShiftingMode.enableItemShiftingMode(false);
 
-        bind.bnveNoAnimationShiftingModeItemShiftingMode.enableAnimation(false);
-        bind.bnveNoAnimationShiftingModeItemShiftingMode.enableShiftingMode(false);
-        bind.bnveNoAnimationShiftingModeItemShiftingMode.enableItemShiftingMode(false);
+        disableAllAnimation(bind.bnveNoAnimationShiftingModeItemShiftingMode);
 
         bind.bnveNoShiftingModeItemShiftingModeText.enableShiftingMode(false);
         bind.bnveNoShiftingModeItemShiftingModeText.enableItemShiftingMode(false);
         bind.bnveNoShiftingModeItemShiftingModeText.setTextVisibility(false);
 
-        bind.bnveNoAnimationShiftingModeItemShiftingModeText.enableAnimation(false);
-        bind.bnveNoAnimationShiftingModeItemShiftingModeText.enableShiftingMode(false);
-        bind.bnveNoAnimationShiftingModeItemShiftingModeText.enableItemShiftingMode(false);
+
+        disableAllAnimation(bind.bnveNoAnimationShiftingModeItemShiftingModeText);
         bind.bnveNoAnimationShiftingModeItemShiftingModeText.setTextVisibility(false);
 
         bind.bnveNoShiftingModeItemShiftingModeAndIcon.enableShiftingMode(false);
@@ -62,14 +59,10 @@ public class StyleActivity extends AppCompatActivity {
         bind.bnveNoItemShiftingModeIcon.enableItemShiftingMode(false);
         bind.bnveNoItemShiftingModeIcon.setIconVisibility(false);
 
-        bind.bnveNoAnimationShiftingModeItemShiftingModeIcon.enableAnimation(false);
-        bind.bnveNoAnimationShiftingModeItemShiftingModeIcon.enableShiftingMode(false);
-        bind.bnveNoAnimationShiftingModeItemShiftingModeIcon.enableItemShiftingMode(false);
+        disableAllAnimation(bind.bnveNoAnimationShiftingModeItemShiftingModeIcon);
         bind.bnveNoAnimationShiftingModeItemShiftingModeIcon.setIconVisibility(false);
 
-        bind.bnveWithPadding.enableAnimation(false);
-        bind.bnveWithPadding.enableShiftingMode(false);
-        bind.bnveWithPadding.enableItemShiftingMode(false);
+        disableAllAnimation(bind.bnveWithPadding);
         bind.bnveWithPadding.setIconVisibility(false);
 
         initCenterIconOnly();
@@ -83,13 +76,18 @@ public class StyleActivity extends AppCompatActivity {
         bind.bnveIconSelector.enableAnimation(false);
 
         initMargin();
+
+        initUncheckedFirstTime();
     }
 
+    private void disableAllAnimation(BottomNavigationViewEx bnve) {
+        bnve.enableAnimation(false);
+        bnve.enableShiftingMode(false);
+        bnve.enableItemShiftingMode(false);
+    }
 
     private void initCenterIconOnly() {
-        bind.bnveCenterIconOnly.enableAnimation(false);
-        bind.bnveCenterIconOnly.enableShiftingMode(false);
-        bind.bnveCenterIconOnly.enableItemShiftingMode(false);
+        disableAllAnimation(bind.bnveCenterIconOnly);
         int centerPosition = 2;
         // attention: you must ensure the center menu item title is empty
         // make icon bigger at centerPosition
@@ -112,17 +110,13 @@ public class StyleActivity extends AppCompatActivity {
     }
 
     private void initSmallerText() {
-        bind.bnveSmallerText.enableAnimation(false);
-        bind.bnveSmallerText.enableShiftingMode(false);
-        bind.bnveSmallerText.enableItemShiftingMode(false);
+        disableAllAnimation(bind.bnveSmallerText);
         // set text size
         bind.bnveSmallerText.setTextSize(8);
     }
 
     private void initBiggerIcon() {
-        bind.bnveBiggerIcon.enableAnimation(false);
-        bind.bnveBiggerIcon.enableShiftingMode(false);
-        bind.bnveBiggerIcon.enableItemShiftingMode(false);
+        disableAllAnimation(bind.bnveBiggerIcon);
         // hide text
         bind.bnveBiggerIcon.setTextVisibility(false);
         // set icon size
@@ -133,9 +127,7 @@ public class StyleActivity extends AppCompatActivity {
     }
 
     private void initCustomTypeface() {
-        bind.bnveCustomTypeface.enableAnimation(false);
-        bind.bnveCustomTypeface.enableShiftingMode(false);
-        bind.bnveCustomTypeface.enableItemShiftingMode(false);
+        disableAllAnimation(bind.bnveCustomTypeface);
         // set typeface : bold
         bind.bnveCustomTypeface.setTypeface(Typeface.DEFAULT_BOLD);
         // you also could set typeface from file.
@@ -144,12 +136,45 @@ public class StyleActivity extends AppCompatActivity {
     }
 
     private void initMargin() {
-        bind.bnveIconMarginTop.enableAnimation(false);
-        bind.bnveIconMarginTop.enableShiftingMode(false);
-        bind.bnveIconMarginTop.enableItemShiftingMode(false);
+        disableAllAnimation(bind.bnveIconMarginTop);
         bind.bnveIconMarginTop.setTextVisibility(false);
         bind.bnveIconMarginTop.setItemHeight(BottomNavigationViewEx.dp2px(this, 56));
         bind.bnveIconMarginTop.setIconsMarginTop(BottomNavigationViewEx.dp2px(this, 16));
+//        bind.bnveIconMarginTop.setIconTintList(0, getResources()
+//                .getColorStateList(R.color.colorGray));
+
+    }
+
+    /**
+     * There is no idea to set no check item first time.
+     * But we can let user think it is unchecked first time by control the color
+     */
+    private void initUncheckedFirstTime() {
+        disableAllAnimation(bind.bnveUncheckedFirstTime);
+        // use the unchecked color for first item
+        bind.bnveUncheckedFirstTime.setIconTintList(0, getResources()
+                .getColorStateList(R.color.colorGray));
+        bind.bnveUncheckedFirstTime.setTextTintList(0, getResources()
+                .getColorStateList(R.color.colorGray));
+        bind.bnveUncheckedFirstTime.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            private boolean firstClick = true;
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                // restore the color when click
+                if (firstClick) {
+                    int position = bind.bnveUncheckedFirstTime.getMenuItemPosition(item);
+                    if (0 == position) {
+                        firstClick = false;
+                        bind.bnveUncheckedFirstTime.setIconTintList(0, getResources()
+                                .getColorStateList(R.color.selector_item_primary_color));
+                        bind.bnveUncheckedFirstTime.setTextTintList(0, getResources()
+                                .getColorStateList(R.color.selector_item_primary_color));
+                    }
+                }
+                // do other
+                return true;
+            }
+        });
     }
 
 }

@@ -37,6 +37,7 @@
     <string name="custom_typeface" translatable="false">custom typeface</string>
     <string name="icon_selector" translatable="false">icon selector</string>
     <string name="icon_margin_top" translatable="false">icon margin top</string>
-    <string name="tips_badge_removed">Badge is removed</string>
+    <string name="tips_badge_removed" translatable="false">Badge is removed</string>
+    <string name="unchecked_first_time" translatable="false">unchecked first time</string>
 
 </resources>

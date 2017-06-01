@@ -886,6 +886,9 @@ public class BottomNavigationViewEx extends BottomNavigationView {
     public void setIconTintList(int position, ColorStateList tint) {
         getBottomNavigationItemView(position).setIconTintList(tint);
     }
+    public void setTextTintList(int position, ColorStateList tint) {
+        getBottomNavigationItemView(position).setTextColor(tint);
+    }
 
     /**
      * set margin top for all icons
