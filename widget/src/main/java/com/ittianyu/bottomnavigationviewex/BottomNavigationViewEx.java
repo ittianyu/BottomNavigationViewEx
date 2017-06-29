@@ -544,7 +544,10 @@ public class BottomNavigationViewEx extends BottomNavigationView {
      * @return
      */
     public int getItemCount() {
-        return getBottomNavigationItemViews().length;
+        BottomNavigationItemView[] bottomNavigationItemViews = getBottomNavigationItemViews();
+        if (null == bottomNavigationItemViews)
+            return 0;
+        return bottomNavigationItemViews.length;
     }
 
     /**
