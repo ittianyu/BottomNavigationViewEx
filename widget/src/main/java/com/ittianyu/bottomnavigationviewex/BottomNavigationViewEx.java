@@ -9,6 +9,8 @@ import android.support.annotation.Nullable;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
+import android.support.transition.Transition;
+import android.support.transition.TransitionSet;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.SparseIntArray;
@@ -37,6 +39,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
     private boolean visibilityTextSizeRecord;
     private boolean visibilityHeightRecord;
     private int mItemHeight;
+    private boolean textVisibility = true;
     // used for animation end
 
     // used for setupWithViewPager
@@ -49,15 +52,102 @@ public class BottomNavigationViewEx extends BottomNavigationView {
 
     public BottomNavigationViewEx(Context context) {
         super(context);
+        init();
     }
 
     public BottomNavigationViewEx(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
     public BottomNavigationViewEx(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
     }
+
+    private void init() {
+        try {
+            addAnimationListener();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private void addAnimationListener() {
+        /**
+         * 1. BottomNavigationMenuView mMenuView
+         * 2. private final BottomNavigationAnimationHelperBase mAnimationHelper;
+         * 3. private final TransitionSet mSet;
+         */
+        BottomNavigationMenuView mMenuView = getBottomNavigationMenuView();
+        Object mAnimationHelper = getField(mMenuView.getClass(), mMenuView, "mAnimationHelper");
+        TransitionSet mSet = getField(mAnimationHelper.getClass(), mAnimationHelper, "mSet");
+        mSet.addListener(new Transition.TransitionListener() {
+            @Override
+            public void onTransitionStart(@NonNull Transition transition) {
+            }
+
+            @Override
+            public void onTransitionEnd(@NonNull Transition transition) {
+                refreshTextViewVisibility();
+            }
+
+            @Override
+            public void onTransitionCancel(@NonNull Transition transition) {
+                refreshTextViewVisibility();
+            }
+
+            @Override
+            public void onTransitionPause(@NonNull Transition transition) {
+            }
+
+            @Override
+            public void onTransitionResume(@NonNull Transition transition) {
+            }
+        });
+    }
+
+    private void refreshTextViewVisibility() {
+        if (!textVisibility)
+            return;
+        // 1. get mMenuView
+        BottomNavigationMenuView mMenuView = getBottomNavigationMenuView();
+        // 2. get mButtons
+        BottomNavigationItemView[] mButtons = getBottomNavigationItemViews();
+
+        int currentItem = getCurrentItem();
+
+        // 3. get field mShiftingMode and TextView in mButtons
+        for (BottomNavigationItemView button : mButtons) {
+            TextView mLargeLabel = getField(button.getClass(), button, "mLargeLabel");
+            TextView mSmallLabel = getField(button.getClass(), button, "mSmallLabel");
+
+            mLargeLabel.clearAnimation();
+            mSmallLabel.clearAnimation();
+
+            // mShiftingMode
+            boolean mShiftingMode = getField(button.getClass(), button, "mShiftingMode");
+            boolean selected = button.getItemPosition() == currentItem;
+            if (mShiftingMode) {
+                if (selected) {
+                    mLargeLabel.setVisibility(VISIBLE);
+                } else {
+                    mLargeLabel.setVisibility(INVISIBLE);
+                }
+                mSmallLabel.setVisibility(INVISIBLE);
+            } else {
+                if (selected) {
+                    mLargeLabel.setVisibility(VISIBLE);
+                    mSmallLabel.setVisibility(INVISIBLE);
+                } else {
+                    mLargeLabel.setVisibility(INVISIBLE);
+                    mSmallLabel.setVisibility(VISIBLE);
+                }
+            }
+        }
+    }
+
 
     /**
      * change the visibility of icon
@@ -131,6 +221,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
      * @param visibility
      */
     public void setTextVisibility(boolean visibility) {
+        this.textVisibility = visibility;
         /*
         1. get field in this class
         private final BottomNavigationMenuView mMenuView;
@@ -148,6 +239,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
         BottomNavigationMenuView mMenuView = getBottomNavigationMenuView();
         // 2. get mButtons
         BottomNavigationItemView[] mButtons = getBottomNavigationItemViews();
+
         // 3. change field mShiftingMode value in mButtons
         for (BottomNavigationItemView button : mButtons) {
             TextView mLargeLabel = getField(button.getClass(), button, "mLargeLabel");
@@ -889,12 +981,14 @@ public class BottomNavigationViewEx extends BottomNavigationView {
     public void setIconTintList(int position, ColorStateList tint) {
         getBottomNavigationItemView(position).setIconTintList(tint);
     }
+
     public void setTextTintList(int position, ColorStateList tint) {
         getBottomNavigationItemView(position).setTextColor(tint);
     }
 
     /**
      * set margin top for all icons
+     *
      * @param marginTop in px
      */
     public void setIconsMarginTop(int marginTop) {
@@ -905,6 +999,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
 
     /**
      * set margin top for icon
+     *
      * @param position
      * @param marginTop in px
      */
