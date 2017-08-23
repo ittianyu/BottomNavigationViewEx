@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.ittianyu.bottomnavigationviewexsample"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 17
         versionName "1.2.3"
