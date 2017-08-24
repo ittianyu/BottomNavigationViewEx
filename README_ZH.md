@@ -124,6 +124,11 @@ allprojects {
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.1'
 ```
 
+如果你可以访问谷歌 maven 仓库 https://maven.google.com，且 SDK >= 26，可以使用新版本
+```groovy
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.3'
+```
+
 #### 手动导入: ####
 
 下载文件 [BottomNavigationViewEx.java](https://raw.githubusercontent.com/ittianyu/BottomNavigationViewEx/master/widget/src/main/java/com/ittianyu/bottomnavigationviewex/BottomNavigationViewEx.java) 并复制到你的工程中。

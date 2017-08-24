@@ -127,6 +127,12 @@ Step 2. Add the dependency
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.1'
 ```
 
+If you can access google maven https://maven.google.com. And SDK >= 26. You can try the new version.
+```groovy
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.3'
+```
+
+
 #### Manual: ####
 
 Downloading [BottomNavigationViewEx.java](https://raw.githubusercontent.com/ittianyu/BottomNavigationViewEx/master/widget/src/main/java/com/ittianyu/bottomnavigationviewex/BottomNavigationViewEx.java) and copying it to you project.
