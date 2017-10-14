@@ -8,9 +8,10 @@ import android.view.View;
 
 import com.ittianyu.bottomnavigationviewexsample.R;
 import com.ittianyu.bottomnavigationviewexsample.databinding.ActivityMainBinding;
+import com.ittianyu.bottomnavigationviewexsample.features.badgeview.BadgeViewActivity;
+import com.ittianyu.bottomnavigationviewexsample.features.centerfab.CenterFabActivity;
 import com.ittianyu.bottomnavigationviewexsample.features.setupwithviewpager.SetupWithViewPagerActivity;
 import com.ittianyu.bottomnavigationviewexsample.features.style.StyleActivity;
-import com.ittianyu.bottomnavigationviewexsample.features.badgeview.BadgeViewActivity;
 import com.ittianyu.bottomnavigationviewexsample.features.viewpager.WithViewPagerActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bind.btnWithViewPager.setOnClickListener(this);
         bind.btnSetupWithViewPager.setOnClickListener(this);
         bind.btnBadgeView.setOnClickListener(this);
+        bind.btnCenterFab.setOnClickListener(this);
     }
 
 
@@ -47,6 +49,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_badge_view:
                 startActivity(new Intent(this, BadgeViewActivity.class));
+                break;
+            case R.id.btn_center_fab:
+                startActivity(new Intent(this, CenterFabActivity.class));
                 break;
 
         }

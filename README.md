@@ -103,6 +103,11 @@ An android lib for enhancing BottomNavigationView.
 
 ![](/read_me_images/view_badger.gif)
 
+**Center Floating Action Button**
+
+![](/read_me_images/center_fab.jpg)
+
+
 ## Adding to project ##
 
 ### Sdk Version ###

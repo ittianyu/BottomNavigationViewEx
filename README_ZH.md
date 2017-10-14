@@ -100,6 +100,12 @@
 
 ![](/read_me_images/view_badger.gif)
 
+
+**中间悬浮按钮**
+
+![](/read_me_images/center_fab.jpg)
+
+
 ## 加入工程 ##
 
 ### Sdk 版本 ###

@@ -23,7 +23,9 @@
         <activity
             android:name=".features.setupwithviewpager.SetupWithViewPagerActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".features.badgeview.BadgeViewActivity"></activity>
+        <activity android:name=".features.badgeview.BadgeViewActivity"/>
+        <activity android:name=".features.centerfab.CenterFabActivity"/>
+
     </application>
 
 </manifest>

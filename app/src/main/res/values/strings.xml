@@ -39,5 +39,6 @@
     <string name="icon_margin_top" translatable="false">icon margin top</string>
     <string name="tips_badge_removed" translatable="false">Badge is removed</string>
     <string name="unchecked_first_time" translatable="false">unchecked first time</string>
+    <string name="center_fab">Center Fab</string>
 
 </resources>
