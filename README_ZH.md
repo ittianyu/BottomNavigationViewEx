@@ -132,7 +132,8 @@ compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.1'
 
 如果你可以访问谷歌 maven 仓库 https://maven.google.com，且 SDK >= 26，可以使用新版本
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.3'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
+compile "com.android.support:design:26.+"
 ```
 
 #### 手动导入: ####
@@ -241,7 +242,7 @@ bind.bnve.setupWithViewPager(bind.vp);
 
 ## 致谢 ##
 
-感谢 [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://github.com/liaolintao).
+感谢 [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://github.com/liaolintao) | [Luong Vo](https://github.com/luongvo).
 
 ## 授权 ##
 

@@ -949,7 +949,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
             if (previousPosition == position) {
                 return true;
             }
-
+//            Log.d("onNavigationItemSelecte", "position:"  + position);
             // user listener
             if (null != listener) {
                 boolean bool = listener.onNavigationItemSelected(item);

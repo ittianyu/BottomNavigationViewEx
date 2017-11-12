@@ -134,7 +134,8 @@ compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.1'
 
 If you can access google maven https://maven.google.com. And SDK >= 26. You can try the new version.
 ```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.3'
+compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
+compile "com.android.support:design:26.+"
 ```
 
 
@@ -240,7 +241,7 @@ You no need to worry about stability. Because I minimise modifying by reflecting
 
 ## Thanks ##
 
-Thanks for [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://github.com/liaolintao).
+Thanks for [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://github.com/liaolintao) | [Luong Vo](https://github.com/luongvo).
 
 
 ## License ##
