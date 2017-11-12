@@ -50,6 +50,9 @@ public class BottomNavigationViewEx extends BottomNavigationView {
     private BottomNavigationItemView[] mButtons;
     // used for setupWithViewPager end
 
+    // detect navigation tab changes when the user clicking on navigation item
+    private static boolean isNavigationItemClicking = false;
+
     public BottomNavigationViewEx(Context context) {
         super(context);
 //        init();
@@ -903,7 +906,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
         @Override
         public void onPageSelected(final int position) {
             final BottomNavigationViewEx bnve = mBnveRef.get();
-            if (null != bnve)
+            if (null != bnve && !isNavigationItemClicking)
                 bnve.setCurrentItem(position);
 //            Log.d("onPageSelected", "--------- position " + position + " ------------");
         }
@@ -960,7 +963,10 @@ public class BottomNavigationViewEx extends BottomNavigationView {
             if (null == viewPager)
                 return false;
 
+            // use isNavigationItemClicking flag to avoid `ViewPager.OnPageChangeListener` trigger
+            isNavigationItemClicking = true;
             viewPager.setCurrentItem(items.get(item.getItemId()), smoothScroll);
+            isNavigationItemClicking = false;
 
             // update previous position
             previousPosition = position;
