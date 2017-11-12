@@ -123,16 +123,12 @@ allprojects {
 	repositories {
 		...
 		maven { url "https://jitpack.io" }
+		maven { url "https://maven.google.com" }
 	}
 }
 ```
 
 Step 2. Add the dependency
-```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.1'
-```
-
-If you can access google maven https://maven.google.com. And SDK >= 26. You can try the new version.
 ```groovy
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
 compile "com.android.support:design:26.+"

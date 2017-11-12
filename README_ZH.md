@@ -121,16 +121,12 @@ allprojects {
 	repositories {
 		...
 		maven { url "https://jitpack.io" }
+		maven { url "https://maven.google.com" }
 	}
 }
 ```
 
 步骤 2. 添加依赖
-```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.1'
-```
-
-如果你可以访问谷歌 maven 仓库 https://maven.google.com，且 SDK >= 26，可以使用新版本
 ```groovy
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
 compile "com.android.support:design:26.+"
