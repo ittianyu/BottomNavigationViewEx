@@ -1,17 +1,19 @@
 package com.ittianyu.bottomnavigationviewex;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Paint;
 import android.graphics.Typeface;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.internal.BottomNavigationItemView;
-import android.support.design.internal.BottomNavigationMenuView;
-import android.support.design.widget.BottomNavigationView;
-import android.support.transition.Transition;
-import android.support.transition.TransitionSet;
-import android.support.v4.view.ViewPager;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.transition.Transition;
+import androidx.transition.TransitionSet;
+import androidx.viewpager.widget.ViewPager;
 import android.util.AttributeSet;
 import android.util.SparseIntArray;
 import android.util.TypedValue;
@@ -28,6 +30,7 @@ import java.lang.reflect.Field;
 /**
  * Created by yu on 2016/11/10.
  */
+@SuppressLint("RestrictedApi")
 public class BottomNavigationViewEx extends BottomNavigationView {
     // used for animation
     private int mShiftAmount;
@@ -883,7 +886,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
      * kept in sync.
      * <p>
      * <p>This class stores the provided BottomNavigationViewEx weakly, meaning that you can use
-     * {@link ViewPager#addOnPageChangeListener(ViewPager.OnPageChangeListener)
+     * {@link ViewPager#addOnPageChangeListener( ViewPager.OnPageChangeListener)
      * addOnPageChangeListener(OnPageChangeListener)} without removing the listener and
      * not cause a leak.
      */
@@ -977,7 +980,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
     }
 
     public void enableShiftingMode(int position, boolean enable) {
-        getBottomNavigationItemView(position).setShiftingMode(enable);
+        getBottomNavigationItemView(position).setShifting(enable);
     }
 
     public void setItemBackground(int position, int background) {
@@ -1018,5 +1021,4 @@ public class BottomNavigationViewEx extends BottomNavigationView {
         setField(BottomNavigationItemView.class, itemView, "mDefaultMargin", marginTop);
         mMenuView.updateMenuView();
     }
-
 }

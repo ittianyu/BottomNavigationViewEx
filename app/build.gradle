@@ -9,7 +9,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 17
         versionName "1.2.3"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -24,11 +24,11 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0-alpha3', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation "com.android.support:appcompat-v7:27.1.1"
-    implementation "com.android.support:design:27.1.1"
+    implementation "androidx.appcompat:appcompat:1.0.0-beta01"
+    implementation "com.google.android.material:material:1.0.0-beta01"
 
     testImplementation 'junit:junit:4.12'
     implementation project(':widget')
