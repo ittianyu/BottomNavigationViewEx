@@ -5,7 +5,6 @@ group='com.github.ittianyu'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
-    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
         minSdkVersion 14
@@ -25,12 +24,12 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    provided "com.android.support:design:$rootProject.supportLibraryVersion"
-    testCompile 'junit:junit:4.12'
+    compileOnly "com.android.support:design:27.1.1"
+    testImplementation 'junit:junit:4.12'
 }
 
 // 指定编码
