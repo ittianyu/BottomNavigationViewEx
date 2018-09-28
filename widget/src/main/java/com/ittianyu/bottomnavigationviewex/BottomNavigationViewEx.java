@@ -426,7 +426,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
          */
         // 1. get mMenuView
         BottomNavigationMenuView mMenuView = getBottomNavigationMenuView();
-        // 2. get mButtons
+        // 2. get buttons
         BottomNavigationItemView[] mButtons = getBottomNavigationItemViews();
         // 3. change field mShiftingMode value in mButtons
         for (BottomNavigationItemView button : mButtons) {
@@ -549,7 +549,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
      */
     private BottomNavigationMenuView getBottomNavigationMenuView() {
         if (null == mMenuView)
-            mMenuView = getField(BottomNavigationView.class, this, "mMenuView");
+            mMenuView = getField(BottomNavigationView.class, this, "menuView");
         return mMenuView;
     }
 
@@ -566,7 +566,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
          * 2 private BottomNavigationItemView[] mButtons;
          */
         BottomNavigationMenuView mMenuView = getBottomNavigationMenuView();
-        mButtons = getField(mMenuView.getClass(), mMenuView, "mButtons");
+        mButtons = getField(mMenuView.getClass(), mMenuView, "buttons");
         return mButtons;
     }
 
@@ -730,7 +730,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
         // 1. get mMenuView
         final BottomNavigationMenuView mMenuView = getBottomNavigationMenuView();
         // 2. set private final int mItemHeight in mMenuView
-        setField(mMenuView.getClass(), mMenuView, "mItemHeight", height);
+        setField(mMenuView.getClass(), mMenuView, "itemHeight", height);
 
         mMenuView.updateMenuView();
     }
@@ -744,7 +744,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
         // 1. get mMenuView
         final BottomNavigationMenuView mMenuView = getBottomNavigationMenuView();
         // 2. get private final int mItemHeight in mMenuView
-        return getField(mMenuView.getClass(), mMenuView, "mItemHeight");
+        return getField(mMenuView.getClass(), mMenuView, "itemHeight");
     }
 
     /**
