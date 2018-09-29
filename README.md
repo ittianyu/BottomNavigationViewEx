@@ -113,7 +113,7 @@ An android lib for enhancing BottomNavigationView.
 ### Sdk Version ###
 `compileSdkVersion` >= 25
 
-### Importing to project ###
+### Importing to project(choose one) ###
 
 #### Example for Gradle: ####
 
@@ -129,9 +129,15 @@ allprojects {
 ```
 
 Step 2. Add the dependency
+1. old version support lib <= 27
 ```groovy
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
 compile "com.android.support:design:26.+"
+```
+2. new version support lib = 28
+```groovy
+implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.0'
+implementation "com.android.support:design:28.0.0"
 ```
 
 
