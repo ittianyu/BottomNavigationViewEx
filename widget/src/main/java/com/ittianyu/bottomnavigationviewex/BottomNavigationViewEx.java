@@ -4,13 +4,9 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Paint;
 import android.graphics.Typeface;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
-import android.support.transition.Transition;
-import android.support.transition.TransitionSet;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.SparseIntArray;
@@ -430,7 +426,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
     }
 
     @Override
-    public void setOnNavigationItemSelectedListener(@Nullable OnNavigationItemSelectedListener listener) {
+    public void setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener listener) {
         // if not set up with view pager, the same with father
         if (null == mMyOnNavigationItemSelectedListener) {
             super.setOnNavigationItemSelectedListener(listener);
@@ -632,7 +628,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
      * @param dpSize  in dp
      */
     public BottomNavigationViewEx setIconSize(float dpSize) {
-        setItemIconSize(dp2px(getContext(),dpSize))
+        setItemIconSize(dp2px(getContext(),dpSize));
         return this;
     }
 
@@ -755,7 +751,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
      *
      * @param viewPager
      */
-    public void setupWithViewPager(@Nullable final ViewPager viewPager) {
+    public void setupWithViewPager(final ViewPager viewPager) {
         setupWithViewPager(viewPager, false);
     }
 
@@ -767,7 +763,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
      * @param viewPager
      * @param smoothScroll whether ViewPager changed with smooth scroll animation
      */
-    public BottomNavigationViewEx setupWithViewPager(@Nullable final ViewPager viewPager, boolean smoothScroll) {
+    public BottomNavigationViewEx setupWithViewPager(final ViewPager viewPager, boolean smoothScroll) {
         if (mViewPager != null) {
             // If we've already been setup with a ViewPager, remove us from it
             if (mPageChangeListener != null) {
@@ -862,7 +858,7 @@ public class BottomNavigationViewEx extends BottomNavigationView {
         }
 
         @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        public boolean onNavigationItemSelected(MenuItem item) {
             int position = items.get(item.getItemId());
             // only set item when item changed
             if (previousPosition == position) {
