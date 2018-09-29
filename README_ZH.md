@@ -128,7 +128,7 @@ allprojects {
 
 步骤 2. 添加依赖
 
-1. 旧版本 support lib <= 27
+1. 旧版本 support lib 25 或 26
 ```groovy
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
 compile "com.android.support:design:26.+"

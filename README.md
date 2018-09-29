@@ -129,7 +129,7 @@ allprojects {
 ```
 
 Step 2. Add the dependency
-1. old version support lib <= 27
+1. old version support lib is 25 or 26
 ```groovy
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
 compile "com.android.support:design:26.+"
