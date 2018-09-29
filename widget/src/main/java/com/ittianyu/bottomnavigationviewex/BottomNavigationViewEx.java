@@ -413,34 +413,8 @@ public class BottomNavigationViewEx extends BottomNavigationView {
      *
      * @param item start from 0.
      */
-    public BottomNavigationViewEx setCurrentItem(int item) {
-        // check bounds
-        if (item < 0 || item >= getMaxItemCount()) {
-            throw new ArrayIndexOutOfBoundsException("item is out of bounds, we expected 0 - "
-                    + (getMaxItemCount() - 1) + ". Actually " + item);
-        }
-
-        /*
-        1. get field in this class
-        private final BottomNavigationMenuView mMenuView;
-
-        2. get field in mMenuView
-        private BottomNavigationItemView[] mButtons;
-        private final OnClickListener mOnClickListener;
-
-        3. call mOnClickListener.onClick();
-         */
-        // 1. get mMenuView
-        BottomNavigationMenuView mMenuView = getBottomNavigationMenuView();
-        // 2. get mButtons
-        BottomNavigationItemView[] mButtons = getBottomNavigationItemViews();
-        // get mOnClickListener
-        View.OnClickListener mOnClickListener = getField(mMenuView.getClass(), mMenuView, "onClickListener");
-
-//        System.out.println("mMenuView:" + mMenuView + " mButtons:" + mButtons + " mOnClickListener" + mOnClickListener);
-        // 3. call mOnClickListener.onClick();
-        mOnClickListener.onClick(mButtons[item]);
-
+    public BottomNavigationViewEx setCurrentItem(int index) {
+        setSelectedItemId(getMenu().getItem(index).getItemId());
         return this;
     }
 
@@ -649,6 +623,16 @@ public class BottomNavigationViewEx extends BottomNavigationView {
         for (int i = 0; i < count; i++) {
             setIconSizeAt(i, width, height);
         }
+        return this;
+    }
+    
+     /**
+     * set all item ImageView size
+     *
+     * @param dpSize  in dp
+     */
+    public BottomNavigationViewEx setIconSize(float dpSize) {
+        setItemIconSize(dp2px(getContext(),dpSize))
         return this;
     }
 
