@@ -138,6 +138,12 @@ compile "com.android.support:design:26.+"
 implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.0'
 implementation "com.android.support:design:28.0.0"
 ```
+3. AndroidX
+使用新版本，然后在 gradle.properties 中添加如下配置
+```
+android.useAndroidX=true
+android.enableJetifier=true
+```
 
 #### 手动导入: ####
 
