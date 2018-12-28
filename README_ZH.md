@@ -233,6 +233,8 @@ bind.bnve.setupWithViewPager(bind.vp);
 ## 混淆 ##
 
 如果你启用了 ProGuard，那你应该加上以下混淆代码:
+
+#### 非 Android X 版本 ####
 ```
 -keep public class android.support.design.widget.BottomNavigationView { *; }
 -keep public class android.support.design.internal.BottomNavigationMenuView { *; }
@@ -240,6 +242,13 @@ bind.bnve.setupWithViewPager(bind.vp);
 -keep public class android.support.design.internal.BottomNavigationItemView { *; }
 ```
 
+#### Android X 版本 ####
+```
+-keep public class com.google.android.material.bottomnavigation.BottomNavigationView { *; }
+-keep public class com.google.android.material.bottomnavigation.BottomNavigationMenuView { *; }
+-keep public class com.google.android.material.bottomnavigation.BottomNavigationPresenter { *; }
+-keep public class com.google.android.material.bottomnavigation.BottomNavigationItemView { *; }
+```
 
 ## 来源 ##
 
