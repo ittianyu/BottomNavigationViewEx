@@ -231,11 +231,21 @@ You can [click here](https://developer.android.com/reference/android/support/des
 ## ProGuard ##
 
 If you are using ProGuard you might need to add the following option:
+
+#### None Android X ####
 ```
 -keep public class android.support.design.widget.BottomNavigationView { *; }
 -keep public class android.support.design.internal.BottomNavigationMenuView { *; }
 -keep public class android.support.design.internal.BottomNavigationPresenter { *; }
 -keep public class android.support.design.internal.BottomNavigationItemView { *; }
+```
+
+#### Android X ####
+```
+-keep public class com.google.android.material.bottomnavigation.BottomNavigationView { *; }
+-keep public class com.google.android.material.bottomnavigation.BottomNavigationMenuView { *; }
+-keep public class com.google.android.material.bottomnavigation.BottomNavigationPresenter { *; }
+-keep public class com.google.android.material.bottomnavigation.BottomNavigationItemView { *; }
 ```
 
 ## References ##
