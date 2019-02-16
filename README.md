@@ -6,18 +6,6 @@ An android lib for enhancing BottomNavigationView.
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg) ![api 9+](https://img.shields.io/badge/API-9%2B-green.svg)
 
 
-## Emergency Help ##
-
-Hello everyone! I am a graduate of 2018. Unfortunately, my family is bankrupt this year.(China has no personal bankruptcy law). I can't afford the debt in a short time. I had to be cheeky for help. (This library has been created for 2 years, get 2.3k star currently. I have never asked for donate before. But I have no way this time.)
-
-If you are glad to help me, please donate with nicknames, contact information (such as email), I will update the information and amount of donor to <a href="#donate">this page</a> after work.
-Good luck for you.
-
-**paypal: admin@ittianyu.com**
-
-![](/read_me_images/donate_alipay.png) ![](/read_me_images/donate_wechat.png)
-
-
 ## Features ##
 
 |Method|Description
@@ -293,6 +281,12 @@ Thanks to [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://gith
 	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 	SOFTWARE.
+
+## Donate ##
+
+**paypal: admin@ittianyu.com**
+
+![](/read_me_images/donate_alipay.png) ![](/read_me_images/donate_wechat.png)
 
 
 ## <a name="donate">Donator</a> ##
