@@ -3,9 +3,26 @@
 
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg) ![api 9+](https://img.shields.io/badge/API-9%2B-green.svg)
 
-## 关于我们 ##
-[![天宇工作室](https://github.com/ittianyu/MobileGuard/blob/master/read_me_images/logo-transparent.png?raw=true)](http://www.ittianyu.com)
 
+## 紧急求助 ##
+
+各位大佬好，我是18届毕业生，因家里变故，无力还债，不得不厚着脸皮来求助。（本库已创建2年，目前2.3k star，期间从未要过打赏，但这一次我真的走投无路了）
+
+2019-02-15 晚上还在加班，突然接到家里电话，跟我说我爸欠了几十万，在我详细追问下，大概欠了银行三十多万，欠了个人十几万，再找别人借钱解燃眉之急明显是不可能的。欠债的原因是创业投资失败，跟去年"毛衣战"有关，强依赖出口的实体行业。虽然我也怀疑有可能是借钱炒股/菠菜导致的负债，但我选择相信我爸。
+
+目前银行的债分别是多张信用卡和创业贷款，分了6期和12期，还有24期的。
+从账单来看，大概一个月要还3w，然而我工资也就应届生中等水平，远远负担不起，幸好大学时接外包和工作半年存了一些钱，但也只够撑几个月的，现在外面各种人员优化，我第一次对失业感到害怕。我曾经以为，只要省吃俭用不负债，还是可以熬过这个冬天，现在看来我大概是熬不过去了。
+
+迫于绝望，来此求助，希望好心人给捐点钱，付款时备注昵称和联系方式(比如邮箱)，我会在当天晚上下班后，把捐赠者信息和金额更新到 <a href="#donate">本页面</a>。无以为报，后面我打算写一套项目开发实战教程(包括前后端和app)，具体项目选取可以有各位大佬决定，预计今年内完成后给各位大佬免费推送到联系方式。
+
+paypal: admin@ittianyu.com
+
+![](/read_me_images/donate_alipay.png) ![](/read_me_images/donate_wechat.png)
+
+
+另外前段时间看到有人转让 git 仓库，如果有大佬看上这个仓库，还请联系。
+
+![](/read_me_images/help.jpg)
 
 ## 功能 ##
 
@@ -262,6 +279,7 @@ bind.bnve.setupWithViewPager(bind.vp);
 
 感谢 [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://github.com/liaolintao) | [Luong Vo](https://github.com/luongvo).
 
+
 ## 授权 ##
 
 	MIT License
@@ -285,3 +303,10 @@ bind.bnve.setupWithViewPager(bind.vp);
 	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 	SOFTWARE.
+
+
+## <a name="donate">捐赠者名单</a> ##
+
+| 捐赠者 | 金额 |
+|-------|------|
+| xxx xxxxxx@xx.xx | xx元 |
