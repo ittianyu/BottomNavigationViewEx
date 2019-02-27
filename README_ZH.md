@@ -283,6 +283,10 @@ bind.bnve.setupWithViewPager(bind.vp);
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 	SOFTWARE.
 
+## 反馈 ##
+
+qq群:913494600
+
 
 ## 打赏 ##
 
