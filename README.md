@@ -6,6 +6,13 @@ An android lib for enhancing BottomNavigationView.
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg) ![api 9+](https://img.shields.io/badge/API-9%2B-green.svg)
 
 
+## <a name="donate">Donator</a> ##
+
+| Info | Amount |
+|-------|------|
+| [Linsong Wang](https://github.com/wanglinsong) | 100$ |
+
+
 ## Features ##
 
 |Method|Description
@@ -288,9 +295,3 @@ Thanks to [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://gith
 
 ![](/read_me_images/donate_alipay.png) ![](/read_me_images/donate_wechat.png)
 
-
-## <a name="donate">Donator</a> ##
-
-| Info | Amount |
-|-------|------|
-| xxx xxxxxx@xx.xx | x $ |

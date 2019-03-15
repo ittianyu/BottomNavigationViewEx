@@ -3,6 +3,13 @@
 
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg) ![api 9+](https://img.shields.io/badge/API-9%2B-green.svg)
 
+## <a name="donate">捐赠者</a> ##
+
+| 信息 | 金额 |
+|-------|------|
+| [Linsong Wang](https://github.com/wanglinsong) | 100$ |
+
+
 ## 功能 ##
 
 |methods|description
@@ -294,9 +301,3 @@ paypal: admin@ittianyu.com
 
 ![](/read_me_images/donate_alipay.png) ![](/read_me_images/donate_wechat.png)
 
-
-## <a name="donate">捐赠者名单</a> ##
-
-| 捐赠者 | 金额 |
-|-------|------|
-| xxx xxxxxx@xx.xx | xx元 |
