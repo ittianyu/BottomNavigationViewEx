@@ -232,7 +232,6 @@
             <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
                 android:id="@+id/bnve_icon_selector"
                 style="@style/bnve_white_bg"
-                app:itemIconTint="@color/selector_item_primary_color"
                 app:itemTextColor="@color/selector_item_primary_color"
                 app:menu="@menu/menu_navigation_selector" />
 
