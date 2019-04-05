@@ -70,7 +70,6 @@ public class BottomNavigationViewInner extends BottomNavigationView {
                         android.support.design.R.styleable.BottomNavigationView_itemTextAppearanceActive});
         // clear if you don't have set item icon tint list
         if (!a.hasValue(android.support.design.R.styleable.BottomNavigationView_itemIconTint)) {
-            System.out.println("------clearIconTintColor-------");
             clearIconTintColor();
         }
         a.recycle();

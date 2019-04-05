@@ -138,7 +138,7 @@ compile "com.android.support:design:26.+"
 ```
 2. 新版本 support lib = 28
 ```groovy
-implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.3'
+implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
 implementation "com.android.support:design:28.0.0"
 ```
 3. AndroidX
