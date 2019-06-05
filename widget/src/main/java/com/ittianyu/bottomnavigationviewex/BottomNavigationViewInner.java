@@ -5,12 +5,12 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Paint;
 import android.graphics.Typeface;
-import android.support.design.internal.BottomNavigationItemView;
-import android.support.design.internal.BottomNavigationMenuView;
-import android.support.design.internal.ThemeEnforcement;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.TintTypedArray;
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
+import com.google.android.material.internal.ThemeEnforcement;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.widget.TintTypedArray;
 import android.util.AttributeSet;
 import android.util.SparseIntArray;
 import android.util.TypedValue;
@@ -64,12 +64,12 @@ public class BottomNavigationViewInner extends BottomNavigationView {
     public BottomNavigationViewInner(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         TintTypedArray a = ThemeEnforcement.obtainTintedStyledAttributes(context, attrs,
-                android.support.design.R.styleable.BottomNavigationView,
-                defStyleAttr, android.support.design.R.style.Widget_Design_BottomNavigationView,
-                new int[]{android.support.design.R.styleable.BottomNavigationView_itemTextAppearanceInactive,
-                        android.support.design.R.styleable.BottomNavigationView_itemTextAppearanceActive});
+                com.google.android.material.R.styleable.BottomNavigationView,
+                defStyleAttr, com.google.android.material.R.style.Widget_Design_BottomNavigationView,
+                new int[]{com.google.android.material.R.styleable.BottomNavigationView_itemTextAppearanceInactive,
+                        com.google.android.material.R.styleable.BottomNavigationView_itemTextAppearanceActive});
         // clear if you don't have set item icon tint list
-        if (!a.hasValue(android.support.design.R.styleable.BottomNavigationView_itemIconTint)) {
+        if (!a.hasValue(com.google.android.material.R.styleable.BottomNavigationView_itemIconTint)) {
             clearIconTintColor();
         }
         a.recycle();
